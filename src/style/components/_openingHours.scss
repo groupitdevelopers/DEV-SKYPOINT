@@ -1,0 +1,20 @@
+.openWrapper {
+    
+    .openHoursWrapper {
+        width: 66rem;
+        
+        .hoursHeader {
+            text-align: center;
+            background-color: $success-color;
+            font-size: 1.8rem;
+            font-weight: $bold;
+            margin-bottom: 1rem;
+        }
+
+        .hoursLine {
+            text-align: center;
+            font-size: 1.6rem;
+            padding: 1rem 0;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.link {
+    color: $info-color;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+.inputText {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 1.8rem;
+    font-weight: $regular;
+    line-height: 1.5;
+    color: $dark-color;
+    background-clip: padding-box;
+    border: 1px solid $light-color;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+
+    &::placeholder {
+        color: $gray-color;
+    }
+}
+
+.inputTextarea {
+    width: 99%;
+    height: 15rem;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    border-radius: 0.25rem;
+    outline: none;
+    border: 1px solid $light-color;
+    resize: none;
+    font-family: "Poppins", sans-serif;
+}
+
+label {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.labelLight {
+    color: $gray-color;
+    font-size: 1.8rem;
+}
+
+select {
+    display: block;
+    width: 12rem;
+    min-height: 4rem;
+    padding: 6px 12px;
+    font-size: 1.8rem;
+    font-weight: $regular;
+    line-height: 1.5;
+    color: $gray-color;
+    background-clip: padding-box;
+    border: 1px solid $light-color;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.selectFull {
+    width: 100%;
+}

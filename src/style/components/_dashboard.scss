@@ -1,0 +1,219 @@
+.dashboardWrapper {
+  .widget {
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    .View {
+      -webkit-mask-image: url(./images/Views.svg);
+      mask-image: url(./images/Views.svg);
+    }
+    .Alert {
+      -webkit-mask-image: url(./images/Alert.svg);
+      mask-image: url(./images/Alert.svg);
+    }
+    .BirthdayDrink {
+      -webkit-mask-image: url(./images/BirthdayDrink.svg);
+      mask-image: url(./images/BirthdayDrink.svg);
+    }
+    .Breakfast {
+      -webkit-mask-image: url(./images/Breakfast.svg);
+      mask-image: url(./images/Breakfast.svg);
+    }
+    .Calendar {
+      -webkit-mask-image: url(./images/Calendar.svg);
+      mask-image: url(./images/Calendar.svg);
+    }
+    .Celebrate {
+      -webkit-mask-image: url(./images/Celebrate.svg);
+      mask-image: url(./images/Celebrate.svg);
+    }
+    .Chat {
+      -webkit-mask-image: url(./images/Chat.svg);
+      mask-image: url(./images/Chat.svg);
+    }
+    .ClimbEquipment {
+      -webkit-mask-image: url(./images/ClimbEquipment.svg);
+      mask-image: url(./images/ClimbEquipment.svg);
+    }
+    .Cocktail {
+      -webkit-mask-image: url(./images/Cocktail.svg);
+      mask-image: url(./images/Cocktail.svg);
+    }
+    .CorporateEvents {
+      -webkit-mask-image: url(./images/CorporateEvents.svg);
+      mask-image: url(./images/CorporateEvents.svg);
+    }
+    .Drive {
+      -webkit-mask-image: url(./images/Drive.svg);
+      mask-image: url(./images/Drive.svg);
+    }
+    .Email {
+      -webkit-mask-image: url(./images/Email.svg);
+      mask-image: url(./images/Email.svg);
+    }
+    .EnclosedShoes {
+      -webkit-mask-image: url(./images/EnclosedShoes.svg);
+      mask-image: url(./images/EnclosedShoes.svg);
+    }
+    .Event {
+      -webkit-mask-image: url(./images/Event.svg);
+      mask-image: url(./images/Event.svg);
+    }
+    .Facebook {
+      -webkit-mask-image: url(./images/Facebook.svg);
+      mask-image: url(./images/Facebook.svg);
+    }
+    .GalaDinners {
+      -webkit-mask-image: url(./images/GalaDinners.svg);
+      mask-image: url(./images/GalaDinners.svg);
+    }
+    .GLink {
+      -webkit-mask-image: url(./images/GLink.svg);
+      mask-image: url(./images/GLink.svg);
+    }
+    .Hat {
+      -webkit-mask-image: url(./images/Hat.svg);
+      mask-image: url(./images/Hat.svg);
+    }
+    .Instagram {
+      -webkit-mask-image: url(./images/Instagram.svg);
+      mask-image: url(./images/Instagram.svg);
+    }
+    .Location {
+      -webkit-mask-image: url(./images/Location.svg);
+      mask-image: url(./images/Location.svg);
+    }
+    .LooseItems {
+      -webkit-mask-image: url(./images/LooseItems.svg);
+      mask-image: url(./images/LooseItems.svg);
+    }
+    .MaxWeight {
+      -webkit-mask-image: url(./images/MaxWeight.svg);
+      mask-image: url(./images/MaxWeight.svg);
+    }
+    .Meals {
+      -webkit-mask-image: url(./images/Meals.svg);
+      mask-image: url(./images/Meals.svg);
+    }
+    .MinAge {
+      -webkit-mask-image: url(./images/MinAge.svg);
+      mask-image: url(./images/MinAge.svg);
+    }
+    .MinHeight {
+      -webkit-mask-image: url(./images/MinHeight.svg);
+      mask-image: url(./images/MinHeight.svg);
+    }
+    .Music {
+      -webkit-mask-image: url(./images/Music.svg);
+      mask-image: url(./images/Music.svg);
+    }
+    .Offers {
+      -webkit-mask-image: url(./images/Offers.svg);
+      mask-image: url(./images/Offers.svg);
+    }
+    .PaperWork {
+      -webkit-mask-image: url(./images/PaperWork.svg);
+      mask-image: url(./images/PaperWork.svg);
+    }
+    .Photo {
+      -webkit-mask-image: url(./images/Photo.svg);
+      mask-image: url(./images/Photo.svg);
+    }
+    .Q1Building {
+      -webkit-mask-image: url(./images/Q1Building.svg);
+      mask-image: url(./images/Q1Building.svg);
+    }
+    .Rewards {
+      -webkit-mask-image: url(./images/Rewards.svg);
+      mask-image: url(./images/Rewards.svg);
+    }
+    .SeaLevel {
+      -webkit-mask-image: url(./images/SeaLevel.svg);
+      mask-image: url(./images/SeaLevel.svg);
+    }
+    .Stairs {
+      -webkit-mask-image: url(./images/Stairs.svg);
+      mask-image: url(./images/Stairs.svg);
+    }
+    .Sunset {
+      -webkit-mask-image: url(./images/Sunset.svg);
+      mask-image: url(./images/Sunset.svg);
+    }
+    .Ticket {
+      -webkit-mask-image: url(./images/Ticket.svg);
+      mask-image: url(./images/Ticket.svg);
+    }
+    .Time {
+      -webkit-mask-image: url(./images/Time.svg);
+      mask-image: url(./images/Time.svg);
+    }
+    .Visibility {
+      -webkit-mask-image: url(./images/Visibility.svg);
+      mask-image: url(./images/Visibility.svg);
+    }
+    .Walk {
+      -webkit-mask-image: url(./images/Walk.svg);
+      mask-image: url(./images/Walk.svg);
+    }
+    .Weddings {
+      -webkit-mask-image: url(./images/Weddings.svg);
+      mask-image: url(./images/Weddings.svg);
+    }
+    .YouTube {
+      -webkit-mask-image: url(./images/YouTube.svg);
+      mask-image: url(./images/YouTube.svg);
+    }
+
+    .icon {
+      width: 6rem;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+    .data {
+      width: 100%;
+      min-width: 12rem;
+      margin-left: 1rem;
+    }
+
+    .center {
+      text-align: center;
+      .icon {
+        height: 6rem;
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+    }
+  }
+
+  .widgetLeftIcon {
+    width: 22rem;
+  }
+
+  @media screen and ($media-xs) {
+    .widget {
+      text-align: center;
+      margin: auto;
+
+      .icon {
+        min-width: 4rem;
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+    }
+  }
+
+  @media screen and ($media-sm) {
+    .widget {
+      text-align: center;
+      flex-flow: row wrap;
+      justify-content: space-around;
+
+      .icon {
+        min-width: 4rem;
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+    }
+  }
+}

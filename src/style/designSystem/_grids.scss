@@ -1,0 +1,142 @@
+@use "sass:math";
+
+@mixin gridStyle($width) {
+  -ms-flex: 0 $width;
+  flex: 0 $width;
+  max-width: $width;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+}
+
+$classes: (
+  "0": "11-12",
+  "1": "7-8",
+  "2": "5-6",
+  "3": "3-4",
+  "4": "2-3",
+  "5": "5-8",
+  "6": "7-12",
+  "7": "1-2",
+  "8": "half",
+  "9": "5-12",
+  "10": "3-8",
+  "11": "1-3",
+  "12": "one-third",
+  "13": "1-4",
+  "14": "quarter",
+  "15": "1-6",
+  "16": "1-8",
+  "17": "1",
+  "18": "full",
+);
+
+$sizes: (
+  "0": 22,
+  "1": 21,
+  "2": 20,
+  "3": 18,
+  "4": 16,
+  "5": 15,
+  "6": 14,
+  "7": 12,
+  "8": 12,
+  "9": 10,
+  "10": 9,
+  "11": 8,
+  "12": 8,
+  "13": 6,
+  "14": 6,
+  "15": 4,
+  "16": 3,
+  "17": 24,
+  "18": 24,
+);
+
+// .container::before {
+//   content: '';
+//   display: block;
+//   height: 8.5rem;
+//   margin-top: -8.5rem;
+//   visibility: hidden;
+// }
+
+.container {
+  margin: 2rem;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+@for $i from 1 to 25 {
+  $width: math.percentage(math.div($i, 24));
+  .col_#{$i}-24 {
+    @include gridStyle($width);
+  }
+}
+
+@each $j, $size in $sizes {
+  $class: map-get($classes, $j);
+  $width: math.percentage(math.div($size, 24));
+  .col_#{$class} {
+    @include gridStyle($width);
+  }
+}
+
+@for $k from 1 to 6 {
+  $width: math.percentage(math.div($k, 5));
+  .col_#{$k}-5 {
+    @include gridStyle($width);
+  }
+}
+
+// MEDIA QUERY
+
+@each $m, $mediaSize in $mediaSizes {
+  $containerValue: "";
+  $containerValue: #{map-get($containerWidth, $m)};
+
+  @media #{$mediaSize} {
+    .container {
+      width: $containerValue;
+    }
+
+    @for $i from 1 to 25 {
+      $width: math.percentage(math.div($i, 24));
+      .col#{map-get($mediaPrefix, $m)}_#{$i}-24 {
+        @include gridStyle($width);
+      }
+    }
+
+    @each $j, $size in $sizes {
+      $class: map-get($classes, $j);
+      $width: math.percentage(math.div($size, 24));
+      .col#{map-get($mediaPrefix, $m)}_#{$class} {
+        @include gridStyle($width);
+      }
+    }
+
+    @for $k from 1 to 5 {
+      $width: math.percentage(math.div($k, 5));
+      .col#{map-get($mediaPrefix, $m)}_#{$k}-5 {
+        @include gridStyle($width);
+      }
+    }
+  }
+}

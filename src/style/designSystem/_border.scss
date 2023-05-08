@@ -1,0 +1,58 @@
+// SIDE
+$sidePrefix: (
+  "0": "",
+  "1": "-top",
+  "2": "-right",
+  "3": "-bottom",
+  "4": "-left",
+);
+
+@each $s, $side in $sidePrefix {
+  .border#{$side} {
+    border#{$side}: 1px solid gray#{$imp};
+  }
+  .border#{$side}-0 {
+    border#{$side}: none#{$imp};
+  }
+}
+
+// COLOR
+@each $c, $colorName in $colorNames {
+  .border-#{$colorName} {
+    border-color: #{map-get($colorPalette, $c)}#{$imp};
+  }
+}
+
+@each $m, $mediaSize in $mediaSizes {
+  @media #{$mediaSize} {
+    @each $c, $colorName in $colorNames {
+      .border#{map-get($mediaPrefix, $m)}-#{$colorName} {
+        border-color: #{map-get($colorPalette, $c)}#{$imp};
+      }
+    }
+  }
+}
+
+// SIZE
+@for $k from 0 to 50 {
+  .border-s#{$k} {
+    border-width: #{$k}px #{$imp};
+  }
+}
+
+// RADIUS
+@for $r from 0 to 7 {
+  .border-r#{$r} {
+    border-radius: #{$r}#{$imp};
+  }
+}
+
+@each $m, $mediaSize in $mediaSizes {
+  @media #{$mediaSize} {
+    @for $r from 0 to 7 {
+      .border#{map-get($mediaPrefix, $m)}-r#{$r} {
+        border-radius: #{$r}#{$imp};
+      }
+    }
+  }
+}

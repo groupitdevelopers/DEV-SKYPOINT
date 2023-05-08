@@ -1,0 +1,47 @@
+{
+  "name": "skypoint",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SkyPoint",
+  "author": "Mahesh Samudra <maheshsamudra@gmail.com>",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@babel/helpers": "^7.21.5",
+    "@babel/traverse": "^7.21.5",
+    "@hookform/resolvers": "^3.1.0",
+    "@prismicio/react": "^2.5.2",
+    "css-loader": "^6.7.3",
+    "gatsby": "^5.3.3",
+    "gatsby-plugin-anchor-links": "^1.2.1",
+    "gatsby-plugin-image": "^3.8.0",
+    "gatsby-plugin-manifest": "^5.9.0",
+    "gatsby-plugin-prismic-previews": "^5.3.0",
+    "gatsby-plugin-sass": "^6.9.0",
+    "gatsby-plugin-sharp": "^5.8.0",
+    "gatsby-plugin-sitemap": "^6.8.0",
+    "gatsby-source-filesystem": "^5.8.0",
+    "gatsby-source-prismic": "^5.3.0",
+    "gatsby-transformer-sharp": "^5.8.0",
+    "is-odd": "^3.0.1",
+    "react": "^18.2.0",
+    "react-alice-carousel": "^2.7.1",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
+    "react-hooks-global-state": "^2.1.0",
+    "sass": "^1.62.1",
+    "yup": "^1.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.6"
+  }
+}

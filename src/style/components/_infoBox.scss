@@ -1,0 +1,38 @@
+.infoBoxWrapper {
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  background-color: $light-color;
+  display: flex;
+
+  .infoLogo {
+    width: 4rem;
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/svg/Info.svg);
+    mask-image: url(./images/svg/Info.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: top left;
+    mask-position: top left;
+    margin-right: 1.5rem;
+  }
+  
+  p {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+}
+
+@media screen and ($media-xs) {
+  .infoBoxWrapper {
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and ($media-sm) {
+  .infoBoxWrapper {
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.subscribeFrame {
+  .errorBorder {
+    border: 2px solid $primary-color;
+  }
+}
+
+.contactFromWrapper {
+  .formWrapper {
+    width: 66rem;
+    .error {
+      color: $error-color;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media screen and ($media-xs) {
+  .contactFromWrapper {
+    margin-bottom: 6rem;
+    .formWrapper {
+      width: 100%;
+      .inputText {
+        font-size: 1.4rem;
+      }
+      .inputTextarea {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media screen and ($media-sm) {
+  .contactFromWrapper {
+    .formWrapper {
+      width: 40rem;
+      .inputText {
+        font-size: 1.6rem;
+      }
+      .inputTextarea {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media screen and ($media-md) {
+  .contactFromWrapper {
+    .formWrapper {
+      width: 50rem;
+      .inputText {
+        font-size: 1.8rem;
+      }
+      .inputTextarea {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

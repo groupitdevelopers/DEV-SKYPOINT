@@ -1,0 +1,139 @@
+.alice-carousel {
+  .alice-carousel__wrapper {
+    height: auto !important;
+  }
+
+  .alice-carousel__prev-btn {
+    text-align: left;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    .alice-carousel__prev-btn-wrapper {
+      .alice-carousel__prev-btn-item {
+        background-color: $primary-color;
+        -webkit-mask-image: url(./images/svg/Preview.svg);
+        mask-image: url(./images/svg/Preview.svg);
+        width: 5rem;
+        height: 5rem;
+        span {
+          &::after{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .alice-carousel__next-btn {
+    text-align: right;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    .alice-carousel__next-btn-wrapper {
+      .alice-carousel__next-btn-item {
+        background-color: $primary-color;
+        -webkit-mask-image: url(./images/svg/Next.svg);
+        mask-image: url(./images/svg/Next.svg);
+        width: 5rem;
+        height: 5rem;
+        span {
+          &::after{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .itemWrapper {
+    overflow: auto;
+    padding: 1rem;
+    .item {
+      background-color: $light-color;
+      overflow: auto;
+      margin: 2rem;
+
+      .image {
+        width: 100%;
+        height: 16rem;
+        img {
+          width: 100%;
+        }
+      }
+
+      .dataWrapper {
+        padding-bottom: 2.5rem;
+
+        .btn {
+          display: block;
+          width: 100%;
+          min-width: 20rem;
+          padding: 1.5rem 1.75rem;
+          font-size: 1.8rem;
+          font-weight: $bold;
+        }
+
+        .ticketWrap {
+          margin:  1rem;
+        }
+
+        .ticket {
+          background-image: url(./images/svg/Ticket.svg);
+          background-repeat: no-repeat;
+          background-position: center center;
+          display: flex;
+          .ticketText {
+            font-size: 1.8rem;
+            padding: 2rem 2.5rem;
+            text-align: center;
+            margin: auto;
+          }
+        }
+
+        .price {
+          display: flex;
+          font-size: 6rem;
+          font-weight: $bold;
+          justify-content: center;
+
+          .dollar {
+            font-size: 2.8rem;
+            margin-top: 1rem;
+          }
+        }
+
+        .priceTitle {
+          margin-top: -1rem;
+          font-size: 1.5rem;
+          margin: 0 1rem;
+          min-height: 4.8rem;
+          text-align: center;
+        }
+
+        .afterPay {
+          display: flex;
+          font-size: 1.4rem;
+          justify-content: center;
+          margin:  0 2.5rem 2.5rem 2.5rem;
+
+          .logo {
+            background: url(./images/afterpay.svg);
+            width: 6.5rem;
+            height: 2.3rem;
+            margin-left: 0.5rem;
+          }
+        }
+
+        .ticketTitle{
+          text-align: center;
+          font-weight: $semiBold;
+          font-size: 1.8rem;
+          margin:  0 2.5rem 2.5rem 2.5rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
+}

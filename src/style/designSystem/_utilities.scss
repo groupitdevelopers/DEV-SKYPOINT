@@ -1,0 +1,117 @@
+@use "sass:math";
+// OPACITY
+@for $p from 1 to 101 {
+  $o: math.div($p, 100);
+  .opacity-#{$p} {
+    opacity: #{$o};
+  }
+}
+
+// DISPLAY
+$displays: (
+  "0": "none",
+  "1": "inline",
+  "2": "inline-block",
+  "3": "block",
+  "4": "table",
+  "5": "table-cell",
+  "6": "table-row",
+  "7": "flex",
+  "8": "inline-flex",
+);
+
+@each $d, $display in $displays {
+  .d-#{$display} {
+    display: #{$display}#{$imp};
+  }
+}
+
+@each $m, $mediaSize in $mediaSizes {
+  @media #{$mediaSize} {
+    @each $d, $display in $displays {
+      .d#{map-get($mediaPrefix, $d)}-#{$display} {
+        display: #{$display}#{$imp};
+      }
+    }
+  }
+}
+
+// Z-INDEX
+@for $i from 1 to 11 {
+  .z-#{$i} {
+    z-index: #{$i}px#{$imp};
+  }
+}
+
+// HEADING
+@each $h, $head in $headingSize {
+  h#{$h},
+  .h#{$h} {
+    font-size: #{$head}rem;
+    margin: 3rem 0;
+  }
+}
+
+// PARAGRAPH
+p {
+  font-size: 1.5rem;
+}
+
+// OVERFLOW
+.overflow-auto {
+  overflow: auto !important;
+}
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+// SPACING
+@for $i from 0 to 7 {
+  $v: #{$i}rem#{$imp};
+  .p-#{$i} {
+    padding: $v;
+  }
+  .pt-#{$i} {
+    padding-top: $v;
+  }
+  .pr-#{$i} {
+    padding-right: $v;
+  }
+  .pb-#{$i} {
+    padding-bottom: $v;
+  }
+  .pl-#{$i} {
+    padding-left: $v;
+  }
+  .py-#{$i} {
+    padding-top: $v;
+    padding-bottom: $v;
+  }
+  .px-#{$i} {
+    padding-left: $v;
+    padding-right: $v;
+  }
+  .m-#{$i} {
+    margin: $v;
+  }
+  .mt-#{$i} {
+    margin-top: $v;
+  }
+  .mr-#{$i} {
+    margin-right: $v;
+  }
+  .mb-#{$i} {
+    margin-bottom: $v;
+  }
+  .ml-#{$i} {
+    margin-left: $v;
+  }
+  .my-#{$i} {
+    margin-top: $v;
+    margin-bottom: $v;
+  }
+  .mx-#{$i} {
+    margin-left: $v;
+    margin-right: $v;
+  }
+}

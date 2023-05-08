@@ -1,0 +1,33 @@
+// TEXT
+@each $c, $color in $colorNames {
+  .txt-#{$color} {
+    color: #{map-get($colorPalette, $c)}#{$imp};
+  }
+}
+
+@each $m, $mediaSize in $mediaSizes {
+  @media #{$mediaSize} {
+    @each $c, $color in $colorNames {
+      .txt#{map-get($mediaPrefix, $m)}-#{$color} {
+        color: #{map-get($colorPalette, $c)}#{$imp};
+      }
+    }
+  }
+}
+
+// BACKGROUND
+@each $c, $color in $colorNames {
+  .bg-#{$color} {
+    background: #{map-get($colorPalette, $c)}#{$imp};
+  }
+}
+
+@each $m, $mediaSize in $mediaSizes {
+  @media #{$mediaSize} {
+    @each $c, $color in $colorNames {
+      .bg#{map-get($mediaPrefix, $m)}-#{$color} {
+        background: #{map-get($colorPalette, $c)}#{$imp};
+      }
+    }
+  }
+}

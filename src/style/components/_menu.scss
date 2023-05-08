@@ -1,0 +1,263 @@
+.menuWrapper {
+  position: relative;
+  margin: 0 auto;
+  z-index: 9;
+  background-color: inherit;
+
+  .mobileSubMenu {
+    width: 100%;
+    max-width: 45rem;
+    height: 100%;
+    padding-top: 2rem;
+    position: fixed;
+    font-size: 1.8rem;
+    color: $white-color;
+    background-color: $primary-color;
+    right: 0;
+    -webkit-user-select: none; /* Chrome all / Safari all */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+
+    .social {
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-bottom: 7rem;
+      .iconSocial {
+        width: 5rem;
+        height: 5rem;
+        margin: 2rem;
+        text-align: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: left center;
+        mask-position: left center;
+        cursor: pointer;
+      }
+      .iconIns {
+        background-color: $white-color;
+        -webkit-mask-image: url(./images/svg/Instagram.svg);
+        mask-image: url(./images/svg/Instagram.svg);
+      }
+    
+      .iconFac {
+        background-color: $white-color;
+        -webkit-mask-image: url(./images/svg/Facebook.svg);
+        mask-image: url(./images/svg/Facebook.svg);
+      }
+    
+      .iconYou {
+        background-color: $white-color;
+        -webkit-mask-image: url(./images/svg/YouTube.svg);
+        mask-image: url(./images/svg/YouTube.svg);
+      }
+    }
+
+    ul {
+      list-style: none;
+
+      .listElement {
+        border: none;
+        background-color: transparent;
+        color: $white-color;
+        width: 100%;
+        list-style: none;
+        padding: 1rem 0;
+        font-size: 1.8rem;
+        font-weight: $bold;
+        cursor: pointer;
+        text-align: left;
+      }
+      .menuOpen {
+        position: absolute;
+        right: 2.5rem;
+        cursor: pointer;
+      }
+
+      ul {
+        padding: 1rem 2rem;
+        li {
+          padding: 1rem 0;
+          a {
+            font-weight: $regular;
+            text-decoration: none;
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+
+  // MOBILE
+  .mobileLogo {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/skypointLogo.svg);
+    mask-image: url(./images/skypointLogo.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    width: 10rem;
+    height: 8rem;
+    margin-left: 1.5rem;
+  }
+  .menuLogo {
+    background: url(./images/menu.svg) no-repeat 50% 50%;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+  }
+  .menuLogoCross {
+    background: url(./images/cross.svg) no-repeat 50% 50%;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+  }
+  .mobileMenu {
+    width: 100%;
+    background: $white-color;
+    height: 8rem;
+
+    /* menu */
+    ul {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .stickyMobileMenu {
+    background-color: $white-color;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    // transition: 0.4s;
+    box-shadow: 0px 2px 6px $light-color;
+    z-index: 9;
+    
+  }
+  .entryTicket {
+    width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    font-weight: 700;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    font-size: 1.8rem !important;
+    &:hover {
+      border: none !important;
+    }
+  }
+
+  // DESKTOP
+  .logo {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/skypointLogo.svg);
+    mask-image: url(./images/skypointLogo.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    width: 10rem;
+    height: 8rem;
+    margin-right: 10rem;
+  }
+  .menu {
+    width: 100%;
+    height: 8rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+
+    /* menu */
+    ul {
+      margin: auto;
+      width: 100%;
+      max-width: 144rem;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+          height: 8rem;
+          line-height: 8rem;
+          align-content: center;
+          font-size: 1.8rem;
+          font-weight: $bold;
+        a {
+          color: $primary-color;
+          text-decoration: none;
+          &:hover {
+            cursor: pointer;
+            color: $success-color;
+          }
+        }
+        &:hover {
+          ul {
+            display: block;
+          }
+        }
+        /* submenu */
+        ul {
+          display: none;
+          width: auto;
+          background: $primary-color;
+          flex-direction: column;
+          position: absolute;
+          align-items: flex-start;
+          margin: 0 -2rem;
+          padding: 2rem 0;
+
+          li {
+            color: $white-color;
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding: 0 2rem;
+            height: 3rem;
+            line-height: 3rem;
+            padding: 0 2.5rem;
+            a {
+              text-decoration: none;
+              color: $white-color;
+              &:hover {
+                color: $success-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .entryTicketDesktop {
+    min-width: 20rem;
+    font-weight: $bold;
+    font-size: 1.8rem;
+    line-height: normal;
+    color: $white-color!important;
+  }
+
+  .stickyMenu {
+    width: 100%;
+    height: 8rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    background-color: $white-color;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 2px 6px $light-color;
+    z-index: 9;
+
+  }
+}

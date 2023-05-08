@@ -1,0 +1,122 @@
+@import "./src/style/designSystem/_fonts";
+@import "./src/style/designSystem/_variables";
+@import "./src/style/designSystem/_colors";
+@import "./src/style/designSystem/_grids";
+@import "./src/style/designSystem/border";
+@import "./src/style/designSystem/_text";
+@import "./src/style/designSystem/_buttons";
+@import "./src/style/designSystem/_utilities";
+@import "./src/style/designSystem/_form";
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+
+  .fourzerofour{
+    background: url("./images/404.jpg") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .container {
+      padding-top: 8rem;
+    }
+  }
+
+  .bodyWrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    h1 {
+      font-size: 5.5rem;
+    }
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    // @media screen and ($media-xs) {
+    //   h1 { font-size: 2.8rem; }
+    //   h3 {
+    //     font-size: 2rem;
+    //     font-weight: 400;
+    //   }
+    // }
+    
+    // @media screen and ($media-sm) {
+    //   h1 { font-size: 3.2rem; }
+    //   h3 {
+    //     font-size: 2.2rem;
+    //     font-weight: 400;
+    //   }
+    // }
+  }
+  
+  @media screen and ($media-xs) {
+    h1 { font-size: 2.8rem; }
+    h3 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    .bodyWrapper {
+      padding-bottom: 10rem;
+    }
+    .xsV {display: block!important}
+    .smV {display: none}
+    .mdV {display: none}
+    .lgV {display: none}
+  }
+
+  @media screen and ($media-sm) {
+    h1 { font-size: 3.2rem; }
+    h3 {
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+    .bodyWrapper {
+      padding-bottom: 10rem;
+    }
+    .xsV {display: none}
+    .smV {display: block!important}
+    .mdV {display: none}
+    .lgV {display: none}
+  }
+  
+  @media screen and ($media-md) {
+    .xsV {display: none}
+    .smV {display: none}
+    .mdV {display: block!important}
+    .lgV {display: none}
+  }
+
+  @media screen and ($media-lg) {
+    .xsV {display: none}
+    .smV {display: none}
+    .mdV {display: none}
+    .lgV {display: block!important}
+  }
+}
+
+
+@import "./src/style/components/welcomeMessage";
+@import "./src/style/components/menu";
+@import "./src/style/components/according";
+@import "./src/style/components/box";
+@import "./src/style/components/cards";
+@import "./src/style/components/hero";
+@import "./src/style/components/image";
+@import "./src/style/components/dashboard";
+@import "./src/style/components/carousel";
+@import "./src/style/components/infoBox";
+@import "./src/style/components/contactForm";
+@import "./src/style/components/openingHours";
+@import "./src/style/components/richText";
+@import "./src/style/components/footer";

@@ -1,0 +1,148 @@
+.doubleCardWrapper {
+  .box_padding_left {
+    padding: 0 0 0 0.5rem;
+  }
+
+  .box_padding_right {
+    padding: 0 0.5rem 0 0;
+  }
+
+  .singleImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .doubleCardLeft {
+    width: 100%;
+    min-height: 100%;
+    padding: 10rem 5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    p {
+      width: 80%;
+      line-height: 1.8;
+    }
+    
+    h1 {
+      line-height: 1;
+    }
+
+    .singleImage {
+      width: 100%;
+      height: 100%;
+    }
+
+    .doubleLeftImage {
+      margin-top: 8rem;
+      height: 43rem;
+    }
+
+    .doubleRightImage {
+      margin-top: 14rem;
+      height: 43rem;
+    }
+    .tripleLeftImage {
+      margin-top: 9rem;
+      height: 46rem;
+    }
+
+    .tripleRightImage {
+      margin-top: 10rem;
+      height: 43rem;
+
+      .tripleTopImage {
+        height: 23rem;
+      }
+
+      .tripleBottomImage {
+        height: 23rem;
+        margin-top: -1rem;
+      }
+    }
+  }
+
+  .doubleCardRight {
+    width: 100%;
+    min-height: 100%;
+    padding: 10rem 5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    p {
+      width: 80%;
+      line-height: 1.5;
+    }
+
+    h1 {
+      line-height: 1;
+    }
+
+    .singleImage {
+      width: 100%;
+      height: 100%;
+    }
+
+    .doubleLeftImage {
+      margin-top: 4rem;
+      height: 43rem;
+    }
+
+    .doubleRightImage {
+      margin-top: 10rem;
+      height: 43rem;
+    }
+
+    .tripleLeftImage {
+      margin-top: 3rem;
+      height: 46rem;
+    }
+
+    .tripleRightImage {
+      margin-top: 5rem;
+      height: 43rem;
+
+      .tripleTopImage {
+        height: 23rem;
+      }
+
+      .tripleBottomImage {
+        height: 23rem;
+        margin-top: -1rem;
+      }
+    }
+  }
+
+  @media screen and ($media-xs) {
+    .doubleCardRight {
+      text-align: center;
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.5rem;
+        width: 100%;
+      }
+      padding: 6rem 3rem;
+      min-height: auto;
+    }
+  }
+
+  @media screen and ($media-sm) {
+    .doubleCardRight {
+      text-align: center;
+      h1 {
+        font-size: 2.8rem;
+      }
+      p {
+        font-size: 1.6rem;
+        width: 100%;
+      }
+      padding: 8rem 4rem;
+      min-height: auto;
+    }
+  }
+}

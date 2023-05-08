@@ -1,0 +1,79 @@
+$imp: "!important";
+
+// MEDIA
+$media-xs: "min-width: 300px) and (max-width: 599.98px";
+$media-sm: "min-width: 600px) and (max-width: 899.98px";
+$media-md: "min-width: 900px) and (max-width: 1399.98px";
+$media-lg: "min-width: 1400px";
+
+// MEDIA SIZE
+$mediaSizes: (
+  "0": "(min-width: 300px) and (max-width: 599.98px)",
+  "1": "(min-width: 600px) and (max-width: 899.98px)",
+  "2": "(min-width: 900px) and (max-width: 1399.98px)",
+  "3": "(min-width: 1400px)",
+);
+
+// MEDIA PREFIX
+$mediaPrefix: (
+  "0": "-xm",
+  "1": "-sm",
+  "2": "-md",
+  "3": "-lg",
+);
+
+// CONTAINER SIZE IN MEDIA SCREEN
+$containerWidth: (
+  "0": 100%,
+  "1": 100%,
+  "2": 95%,
+  "3": 132rem,
+);
+
+//COLORS
+$primary-color: rgba(0, 84, 168, 1);
+$secondary-color: rgba(231, 123, 28, 1);
+$success-color: rgba(200, 233, 245, 1);
+$info-color: rgba(56, 170, 183, 1);
+$light-color: rgba(241, 241, 241, 1);
+$dark-color: rgb(0, 39, 68);
+$white-color: rgba(255, 255, 255, 1);
+$black-color: rgba(0, 39, 68, 1);
+$error-color: rgba(255, 73, 60, 1);
+$gray-color: rgb(111, 110, 110);
+
+$colorNames: (
+  "0": "primary",
+  "1": "secondary",
+  "2": "success",
+  "3": "info",
+  "4": "light",
+  "5": "dark",
+  "6": "white",
+  "7": "black",
+  "8": "error",
+  "9": "gray"
+);
+
+$colorPalette: (
+  "0": rgba(0, 84, 168, 1),
+  "1": rgba(231, 123, 28, 1),
+  "2": rgba(200, 233, 245, 1),
+  "3": rgba(56, 170, 183, 1),
+  "4": rgba(241, 241, 241, 1),
+  "5": rgba(33, 33, 33, 1),
+  "6": rgba(255, 255, 255, 1),
+  "7": rgba(0, 39, 68, 1),
+  "8": rgba(0, 0, 0, 0.5),
+  "9": rgb(124, 123, 123)
+);
+
+// HEADING
+$headingSize: (
+  "1": 4,
+  "2": 3.2,
+  "3": 2.8,
+  "4": 2.4,
+  "5": 2,
+  "6": 1.6,
+);

@@ -1,0 +1,97 @@
+.boxWrapper {
+  margin-top: 3.5rem;
+
+  .box_padding_left {
+    padding: 0 0 0 0.5rem;
+  }
+  .box_padding {
+    padding: 0 0.5rem;
+  }
+  .box_padding_right {
+    padding: 0 0.5rem 0 0;
+  }
+
+  // SMALL
+  .smBox {
+    width: 100%;
+    height: 30rem;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: center;
+    overflow: initial;
+
+    .boxImage {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+    }
+
+    .boxTitle {
+      position: absolute;
+      top: 15rem;
+      font-size: 2.2rem;
+      font-weight: $bold;
+      text-align: center;
+      width: 100%;
+    }
+
+    .flag {
+      position: absolute;
+      right: 0;
+      padding: 1rem;
+      width: fit-content;
+    }
+    .smFlag {
+      position: absolute;
+      padding: 1rem 0;
+      width: 100%;
+    }
+    a {
+      margin-top: -8rem;
+    }
+    button {
+      margin-top: -8rem;
+    }
+  }
+
+  // LARGE
+  .box {
+    width: 100%;
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    overflow: initial;
+
+    .boxImage {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+    }
+
+    .boxTitle {
+      position: absolute;
+      top: 11rem;
+      font-size: 3.4rem;
+      font-weight: $bold;
+      text-align: center;
+      width: 100%;
+      padding: 5rem;
+      box-sizing: border-box;
+    }
+
+    .flag {
+      position: absolute;
+      // margin-top: -1.5rem;
+      right: 0;
+      padding: 1rem;
+      width: fit-content;
+    }
+    a {
+      margin-top: -8rem;
+    }
+    button {
+      margin-top: -8rem;
+    }
+  }
+}

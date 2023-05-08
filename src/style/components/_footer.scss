@@ -1,0 +1,123 @@
+.footerWrapper {
+  background-color: $light-color;
+  display: flow-root;
+  
+  .footerLink {
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    a {
+      text-decoration: none;
+      color: $dark-color;
+      &:hover {
+        text-decoration: none;
+        color: $success-color;
+      }
+    }
+  }
+  .footerHeaderText {
+    color: $dark-color;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+  .icon {
+    width: 100%;
+    height: 5rem;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+  
+  .iconSocial {
+    width: 100%;
+    height: 5rem;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: left center;
+    mask-position: left center;
+    cursor: pointer;
+  }
+
+  .iconDW {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/svg/Dreamworld.svg);
+    mask-image: url(./images/svg/Dreamworld.svg);
+  }
+
+  .iconSky {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/svg/SkyPoint.svg);
+    mask-image: url(./images/svg/SkyPoint.svg);
+  }
+
+  .iconWW {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/svg/WhiteWaterWorld.svg);
+    mask-image: url(./images/svg/WhiteWaterWorld.svg);
+  }
+
+  .iconDWF {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/svg/DWF.svg);
+    mask-image: url(./images/svg/DWF.svg);
+  }
+
+  .iconLego {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/svg/LEGO.svg);
+    mask-image: url(./images/svg/LEGO.svg);
+  }
+
+  .iconMO {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/svg/Moonlight.svg);
+    mask-image: url(./images/svg/Moonlight.svg);
+  }
+
+  .iconIns {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/svg/Instagram.svg);
+    mask-image: url(./images/svg/Instagram.svg);
+  }
+
+  .iconFac {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/svg/Facebook.svg);
+    mask-image: url(./images/svg/Facebook.svg);
+  }
+
+  .iconYou {
+    background-color: $primary-color;
+    -webkit-mask-image: url(./images/svg/YouTube.svg);
+    mask-image: url(./images/svg/YouTube.svg);
+  }
+}
+
+@media screen and ($media-xs) {
+  .footerWrapper {
+    display: none;
+  }
+}
+
+@media screen and ($media-sm) {
+  .footerWrapper {
+    display: none;
+  }
+}
+
+@media screen and ($media-md) {
+  .footerWrapper {
+    .footerLink {
+      font-size: 1.3rem;
+    }
+    .footerHeaderText {
+      font-size: 1.3rem;
+    }
+    .icon {
+      height: 4rem;
+    }
+  }
+}

@@ -1,0 +1,188 @@
+.accordionWrapper {
+  .Normal {
+    .accordionItem {
+      margin-bottom: 2.5rem;
+      .accordionTitle {
+        background: $light-color;
+        font-size: 2.6rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        cursor: pointer;
+      }
+      .indicator {
+        display: none;
+      }
+
+      .accordionList {
+        display: none;
+      }
+
+      .accordionContent {
+        width: 100%;
+        padding: 1rem 4.5rem 0 4.5rem;
+        font-size: 1.8rem;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .Number {
+    .accordionItem {
+      margin-bottom: 2.5rem;
+      .accordionList {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        font-size: 2.4rem;
+        margin-top: 0.2rem;
+        transform: skew(0deg, -4deg);
+        text-align: center;
+        font-weight: $bold;
+      }
+      .accordionTitle {
+        background: $light-color;
+        font-size: 2.6rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        cursor: pointer;
+      }
+
+      .accordionContent {
+        width: 100%;
+        padding: 2rem 8rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .Listed {
+    .accordionItem {
+      display: flex;
+      flex-direction: row;
+
+      .mobileLeftSide {
+        width: 6rem;
+        position: relative;
+        .accordionContent {
+          width: 100%;
+          padding-bottom: 5rem;
+          p {
+            margin: 0;
+          }
+        }
+        .middleLine {
+          border-left: 6px solid $light-color;
+          height: 100%;
+          position: absolute;
+          left: 50%;
+          margin-left: -3px;
+          top: 0;
+        }
+
+        .listBox {
+          width: 6rem;
+          height: 4rem;
+          color: rgb(255, 255, 255);
+          line-height: 4rem;
+          font-size: 2rem;
+          -webkit-transform: skew(0deg, -4deg);
+          transform: skew(0deg, -4deg);
+          text-align: center;
+          font-weight: 600;
+          position: absolute;
+          left: 50%;
+          margin-left: -3rem;
+        }
+      }
+      .leftSide {
+        width: 45%;
+        text-align: right;
+        padding: 0 1rem;
+
+        .accordionTitle {
+          font-size: 2rem;
+          font-weight: $bold;
+        }
+
+        .accordionContent {
+          width: 100%;
+          padding-bottom: 5rem;
+          p {
+            margin: 0;
+          }
+        }
+      }
+
+      .middle {
+        width: 10%;
+        position: relative;
+
+        .middleLine {
+          border-left: 6px solid $light-color;
+          height: 100%;
+          position: absolute;
+          left: 50%;
+          margin-left: -3px;
+          top: 0;
+        }
+
+        .listBox {
+          width: 8rem;
+          height: 5rem;
+          color: $white-color;
+          line-height: 5rem;
+          font-size: 2.4rem;
+          transform: skew(0deg, -4deg);
+          text-align: center;
+          font-weight: $bold;
+          position: absolute;
+          left: 50%;
+          margin-left: -4rem;
+        }
+      }
+
+      .rightSide {
+        text-align: left;
+        width: 45%;
+        padding: 0 1rem;
+
+        .accordionTitle {
+          font-size: 2rem;
+          font-weight: $bold;
+        }
+
+        .accordionContent {
+          width: 100%;
+          padding-bottom: 5rem;
+          p {
+            margin: 0;
+          }
+        }
+      }
+      .mobileRightSide {
+        text-align: left;
+        width: calc(100% - 6rem);
+        padding: 1rem;
+
+        .accordionTitle {
+          font-size: 2rem;
+          font-weight: $bold;
+        }
+
+        .accordionContent {
+          width: 100%;
+          padding-bottom: 5rem;
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
