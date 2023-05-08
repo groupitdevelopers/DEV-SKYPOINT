@@ -43,6 +43,8 @@ module.exports = {
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        linkResolver: "./config/prismic/link-resolver.js",
+        path: "/preview"
       }
     },
     {
@@ -52,7 +54,7 @@ module.exports = {
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
         display: 'standalone',
-        icon: 'src/images/icon-512x512.png',
+        icon: './src/images/icon-512x512.png',
       }
     },
     {
