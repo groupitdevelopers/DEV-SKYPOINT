@@ -6,7 +6,7 @@ import MobileMenuList from "./mobileMenu"
 import { Link } from "gatsby"
 
 const Header = () => {
-  const [scroll, setScroll] = useState(true)
+  const [scroll, setScroll] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const openInNewTab = url => {
     window.open(url, '_blank', 'noopener,noreferrer')

@@ -20,14 +20,13 @@ const Accordion = ({
       {isListType && (
         <div className="accordionItem">
           {/* Mobile Menu Extra Small and Small */}
-          <div className="xsV smV">
-              <div className="mobileLeftSide">
+              <div className="mobileLeftSide xsV smV">
                 <div className="middleLine"></div>
                 <div className={`listBox bg-${headerType}`}>
                   <List number={list} />
                 </div>
               </div>
-              <div className="mobileRightSide">
+              <div className="mobileRightSide xsV smV">
                 <div
                   className={`accordionTitle col p-0 mb-1 txt-${headerColor}`}
                 >
@@ -35,11 +34,10 @@ const Accordion = ({
                 </div>
                 <div className="accordionContent">{content}</div>
               </div>
-            </div>
           
           {/* Menu Medium Large */}
-            <div className="mdV lgV">
-              <div className="leftSide">
+            {/* <div className="mdV lgV"> */}
+              <div className="leftSide mdV lgV">
                 {isOdd(list) && (
                   <>
                     <div
@@ -51,13 +49,13 @@ const Accordion = ({
                   </>
                 )}
               </div>
-              <div className="middle">
+              <div className="middle mdV lgV">
                 <div className="middleLine"></div>
                 <div className={`listBox bg-${headerType}`}>
                   <List number={list} />
                 </div>
               </div>
-              <div className="rightSide">
+              <div className="rightSide mdV lgV">
                 {!isOdd(list) && (
                   <>
                     <div
@@ -69,8 +67,8 @@ const Accordion = ({
                   </>
                 )}
               </div>
-            </div>
-        </div>
+            {/* </div> */}
+          </div>
       )}
 
       {!isListType && (

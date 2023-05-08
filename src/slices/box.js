@@ -68,8 +68,8 @@ export const Box = props => {
       case 2:
         response = (
           <>
-              <div className="row mdV lgV">
-                <div className="col_half box_padding_right">
+              <div className="row">
+                <div className="col_half box_padding_right mdV lgV">
                   <div className="col p-0 box">
                     {boxes[0].flag && (
                       <div className={`flag bg-${boxes[0].flag_type}`}>
@@ -96,7 +96,7 @@ export const Box = props => {
                     />
                   </div>
                 </div>
-                <div className="col_half box_padding_left">
+                <div className="col_half box_padding_left mdV lgV">
                   <div className="col p-0 box">
                     {boxes[1].flag && (
                       <div className={`flag bg-${boxes[1].flag_type}`}>
@@ -124,8 +124,8 @@ export const Box = props => {
                   </div>
                 </div>
               </div>
-                <div className="row xsV smV">
-                  <div className="col_half box_padding_right">
+                <div className="row">
+                  <div className="col_half box_padding_right xsV smV">
                     <div className="col p-0 smBox">
                       {boxes[0].flag && (
                         <div className={`flag bg-${boxes[0].flag_type}`}>
@@ -151,7 +151,7 @@ export const Box = props => {
                     </div>
                   </div>
 
-                  <div className="col_half box_padding_left">
+                  <div className="col_half box_padding_left xsV smV">
                     <div className="col p-0 smBox">
                       {boxes[1].flag && (
                         <div className={`flag bg-${boxes[1].flag_type}`}>
@@ -268,86 +268,88 @@ export const Box = props => {
                     </div>
                   </div>
                 </div>
-              <div className="row mdV lgV">
-                <div className="col_one-third box_padding_right">
-                  <div className="col p-0 box">
-                    {boxes[0].flag && (
-                      <div className={`flag bg-${boxes[0].flag_type}`}>
-                        <div className='txt-white'>{boxes[0].flag_text}</div>
+              <div className="mdV lgV">
+                <div className="row">
+                  <div className="col_one-third box_padding_right">
+                    <div className="col p-0 box">
+                      {boxes[0].flag && (
+                        <div className={`flag bg-${boxes[0].flag_type}`}>
+                          <div className='txt-white'>{boxes[0].flag_text}</div>
+                        </div>
+                      )}
+                      <img
+                        className="boxImage"
+                        src={boxes[0].background.url}
+                        alt={boxes[0].background.url}
+                      />
+                      <div className={`boxTitle threeLeft txt-${boxes[0].text_colour}`}>
+                        {boxes[0].title}
                       </div>
-                    )}
-                    <img
-                      className="boxImage"
-                      src={boxes[0].background.url}
-                      alt={boxes[0].background.url}
-                    />
-                    <div className={`boxTitle threeLeft txt-${boxes[0].text_colour}`}>
-                      {boxes[0].title}
+                      <Button
+                        buttonText={boxes[0].button_text}
+                        buttonType={boxes[0].button_type}
+                        buttonLinkUrl={boxes[0].link.url}
+                        buttonLinkUid={boxes[0].link.uid}
+                        buttonAnchorLink={boxes[0].anchor_link}
+                        accessoPromo={boxes[0].accesso_promo_code}
+                        accessoKeyword={boxes[0].accesso_keyword}
+                        accessoPackageId={boxes[0].accesso_packageid}
+                      />
                     </div>
-                    <Button
-                      buttonText={boxes[0].button_text}
-                      buttonType={boxes[0].button_type}
-                      buttonLinkUrl={boxes[0].link.url}
-                      buttonLinkUid={boxes[0].link.uid}
-                      buttonAnchorLink={boxes[0].anchor_link}
-                      accessoPromo={boxes[0].accesso_promo_code}
-                      accessoKeyword={boxes[0].accesso_keyword}
-                      accessoPackageId={boxes[0].accesso_packageid}
-                    />
                   </div>
-                </div>
-                <div className="col_one-third box_padding">
-                  <div className="col p-0 box">
-                    {boxes[1].flag && (
-                      <div className={`flag bg-${boxes[1].flag_type}`}>
-                        <div className='txt-white'>{boxes[1].flag_text}</div>
+                  <div className="col_one-third box_padding">
+                    <div className="col p-0 box">
+                      {boxes[1].flag && (
+                        <div className={`flag bg-${boxes[1].flag_type}`}>
+                          <div className='txt-white'>{boxes[1].flag_text}</div>
+                        </div>
+                      )}
+                      <img
+                        className="boxImage"
+                        src={boxes[1].background.url}
+                        alt={boxes[1].background.url}
+                      />
+                      <div className={`boxTitle threeCenter txt-${boxes[1].text_colour}`}>
+                        {boxes[1].title}
                       </div>
-                    )}
-                    <img
-                      className="boxImage"
-                      src={boxes[1].background.url}
-                      alt={boxes[1].background.url}
-                    />
-                    <div className={`boxTitle threeCenter txt-${boxes[1].text_colour}`}>
-                      {boxes[1].title}
+                      <Button
+                        buttonText={boxes[1].button_text}
+                        buttonType={boxes[1].button_type}
+                        buttonLinkUrl={boxes[1].link.url}
+                        buttonLinkUid={boxes[1].link.uid}
+                        buttonAnchorLink={boxes[1].anchor_link}
+                        accessoPromo={boxes[1].accesso_promo_code}
+                        accessoKeyword={boxes[1].accesso_keyword}
+                        accessoPackageId={boxes[1].accesso_packageid}
+                      />
                     </div>
-                    <Button
-                      buttonText={boxes[1].button_text}
-                      buttonType={boxes[1].button_type}
-                      buttonLinkUrl={boxes[1].link.url}
-                      buttonLinkUid={boxes[1].link.uid}
-                      buttonAnchorLink={boxes[1].anchor_link}
-                      accessoPromo={boxes[1].accesso_promo_code}
-                      accessoKeyword={boxes[1].accesso_keyword}
-                      accessoPackageId={boxes[1].accesso_packageid}
-                    />
                   </div>
-                </div>
-                <div className="col_one-third box_padding_left">
-                  <div className="col p-0 box">
-                    {boxes[2].flag && (
-                      <div className={`flag bg-${boxes[2].flag_type}`}>
-                        <div className='txt-white'>{boxes[2].flag_text}</div>
+                  <div className="col_one-third box_padding_left">
+                    <div className="col p-0 box">
+                      {boxes[2].flag && (
+                        <div className={`flag bg-${boxes[2].flag_type}`}>
+                          <div className='txt-white'>{boxes[2].flag_text}</div>
+                        </div>
+                      )}
+                      <img
+                        className="boxImage"
+                        src={boxes[2].background.url}
+                        alt={boxes[2].background.url}
+                      />
+                      <div className={`boxTitle threeRight txt-${boxes[2].text_colour}`}>
+                        {boxes[2].title}
                       </div>
-                    )}
-                    <img
-                      className="boxImage"
-                      src={boxes[2].background.url}
-                      alt={boxes[2].background.url}
-                    />
-                    <div className={`boxTitle threeRight txt-${boxes[2].text_colour}`}>
-                      {boxes[2].title}
+                      <Button
+                        buttonText={boxes[2].button_text}
+                        buttonType={boxes[2].button_type}
+                        buttonLinkUrl={boxes[2].link.url}
+                        buttonLinkUid={boxes[2].link.uid}
+                        buttonAnchorLink={boxes[2].anchor_link}
+                        accessoPromo={boxes[2].accesso_promo_code}
+                        accessoKeyword={boxes[2].accesso_keyword}
+                        accessoPackageId={boxes[2].accesso_packageid}
+                      />
                     </div>
-                    <Button
-                      buttonText={boxes[2].button_text}
-                      buttonType={boxes[2].button_type}
-                      buttonLinkUrl={boxes[2].link.url}
-                      buttonLinkUid={boxes[2].link.uid}
-                      buttonAnchorLink={boxes[2].anchor_link}
-                      accessoPromo={boxes[2].accesso_promo_code}
-                      accessoKeyword={boxes[2].accesso_keyword}
-                      accessoPackageId={boxes[2].accesso_packageid}
-                    />
                   </div>
                 </div>
               </div>
