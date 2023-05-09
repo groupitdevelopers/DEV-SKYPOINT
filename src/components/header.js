@@ -131,7 +131,7 @@ const Header = () => {
             <nav className={scroll ? "stickyMobileMenu mobileMenu" : "mobileMenu"}>
               <ul>
                 <li key="logoKeyMobile">
-                  <a href="/">
+                  <a href="/" aria-label="Home Page">
                     <div className="mobileLogo"></div>
                   </a>
                 </li>
@@ -197,7 +197,7 @@ const Header = () => {
           <nav className={scroll ? "stickyMenu menu" : "menu"}>
             <ul>
               <li key="logoKeyDesktop">
-                <a href="/">
+                <a href="/" aria-label="Home Page">
                   <div className="logo"></div>
                 </a>
               </li>
@@ -211,7 +211,7 @@ const Header = () => {
                           {m.subMenu.map((sm, j) => (
                             <li key={'Submenu-'+j}>
                               {m.link[j] && <a href={m.link[j]}>{sm}</a>}
-                              {!m.link[j] && <a href="/">{sm}</a>}
+                              {!m.link[j] && <a href="/" aria-label="Home Page">{sm}</a>}
                             </li>
                           ))}
                         </ul>
