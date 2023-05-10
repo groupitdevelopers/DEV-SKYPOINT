@@ -252,6 +252,18 @@ export const query = graphql`
               }
             }
           }
+          ... on PrismicHomepageDataBodyTable {
+            id
+            slice_type
+            primary {
+              header_background
+              header_text_color
+            }
+            items {
+              header_text
+              column
+            }
+          }
         }
         meta_description
         meta_keywords

@@ -11,6 +11,7 @@ import { Infobox } from './infobox'
 import { OpeningHours } from './openHours'
 import { SubscribeForm } from './subscribeForm'
 import { RichText } from './richText'
+import { Table } from './table'
 
 export const components = {
   hero: Hero,
@@ -25,5 +26,6 @@ export const components = {
   infobox: Infobox,
   openinghours: OpeningHours,
   subscribe_form: SubscribeForm,
-  rich_text: RichText
+  rich_text: RichText,
+  table: Table
 }
