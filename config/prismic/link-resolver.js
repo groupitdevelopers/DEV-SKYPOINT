@@ -8,7 +8,6 @@ exports.linkResolver = (doc) => {
       return `/${doc.uid}`;
 
     default:
-      if (!doc.uid) return "/";
-      return doc.uid;
+     return "/";
   }
 };

@@ -20,7 +20,7 @@ export const Image = props => {
         </div>
       </div>
       {text && (
-        <p className="txt-center">{text}</p>
+        <p className="txt-center px-1">{text}</p>
       )}
     </section>
   )
