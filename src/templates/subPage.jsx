@@ -138,6 +138,8 @@ export const query = graphql`
                 url
               }
               anchor_id
+              text
+              auto_image_height
             }
           }
           ... on PrismicSubpageDataBodyDashboard {
