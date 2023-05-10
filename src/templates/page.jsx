@@ -50,6 +50,9 @@ export const query = graphql`
               video {
                 url
               }
+              mobile_video {
+                url
+              }
               page_type
               anchor_id
             }

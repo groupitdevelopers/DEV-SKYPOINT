@@ -8,7 +8,7 @@ const text_color = props.slice.primary.header_text_color
   return (
     <section className="container tableWrapper">
         {props.slice.items.map((box, index) => (
-            <div className="tableBox">
+            <div className="tableBox" key={'table_'+index}>
                 <div className={`header bg-${background}`}>
                     <span className={`txt-${text_color}`}>
                         {box.header_text}

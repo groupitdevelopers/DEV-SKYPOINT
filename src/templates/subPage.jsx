@@ -45,6 +45,9 @@ export const query = graphql`
               }
               page_type
               anchor_id
+              mobile_video {
+                url
+              }
             }
             items {
               button_type
@@ -138,8 +141,6 @@ export const query = graphql`
                 url
               }
               anchor_id
-              text
-              auto_image_height
             }
           }
           ... on PrismicSubpageDataBodyDashboard {
@@ -251,6 +252,18 @@ export const query = graphql`
               rich_text {
                 richText
               }
+            }
+          }
+          ... on PrismicSubpageDataBodyTable {
+            id
+            slice_type
+            items {
+              column
+              header_text
+            }
+            primary {
+              header_background
+              header_text_color
             }
           }
         }

@@ -38,9 +38,14 @@ export const Hero = props => {
         <section 
           className={`${cls}`}
         >
-          <video playsInline autoPlay muted loop className="videoBackground">
+          <video playsInline autoPlay muted loop className="videoBackground mdV lgV">
             <source src={props.slice.primary.video.url} type="video/mp4" />
           </video>
+
+          <video playsInline autoPlay muted loop className="videoBackground xsV smV">
+            <source src={props.slice.primary.mobile_video.url} type="video/mp4" />
+          </video>
+
           <div className="container">
             <div className="row">
               <div className="txt-white p-3 hero-text">
