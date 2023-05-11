@@ -39,16 +39,16 @@ module.exports = {
         accessToken: process.env.PRISMIC_ACCESS_TOKEN
       }
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     start_url: '/',
-    //     background_color: '#f7f0eb',
-    //     theme_color: '#a2466c',
-    //     display: 'standalone',
-    //     icon: './src/images/icon-512x512.png',
-    //   }
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'standalone',
+        icon: './src/images/icon-512x512.png',
+      }
+    },
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {

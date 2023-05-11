@@ -1,31 +1,31 @@
 import React from "react"
 const Widget = ({ icon, header, title, iconColor, headerType, widgetType }) => {
 
-  const [sunsetData, setSunsetData] = React.useState({})
-  const sunData = async () => {
-      const response = await fetch('https://api.sunrise-sunset.org/json?lat=-28.016666&lng=153.399994&date=today&formatted=0');
-      let data = await response.json();
-      let date = data.results.sunset
-      let tzString = 'Australia/Brisbane'
-      let dt = new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
-      let hours = dt.getHours()
-      let minutes = dt.getMinutes()
-      let ampm = hours >= 12 ? 'PM' : 'AM'
-      hours = hours % 12
-      hours = hours ? hours : 12
-      minutes = minutes < 10 ? '0'+minutes : minutes
-      data = hours + ':' + minutes + ' ' + ampm
-      setSunsetData({"sunset":data})
-  }
+  // const [sunsetData, setSunsetData] = React.useState({})
+  // const sunData = async () => {
+  //     const response = await fetch('https://api.sunrise-sunset.org/json?lat=-28.016666&lng=153.399994&date=today&formatted=0');
+  //     let data = await response.json();
+  //     let date = data.results.sunset
+  //     let tzString = 'Australia/Brisbane'
+  //     let dt = new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
+  //     let hours = dt.getHours()
+  //     let minutes = dt.getMinutes()
+  //     let ampm = hours >= 12 ? 'PM' : 'AM'
+  //     hours = hours % 12
+  //     hours = hours ? hours : 12
+  //     minutes = minutes < 10 ? '0'+minutes : minutes
+  //     data = hours + ':' + minutes + ' ' + ampm
+  //     setSunsetData({"sunset":data})
+  // }
 
-  sunData()
+  // sunData()
 
-  switch (icon){
-    case "Sunset":
-      title = sunsetData.sunset
-    break;   
-    default:
-  }
+  // switch (icon){
+  //   case "Sunset":
+  //     title = sunsetData.sunset
+  //   break;   
+  //   default:
+  // }
 
 
   return (
