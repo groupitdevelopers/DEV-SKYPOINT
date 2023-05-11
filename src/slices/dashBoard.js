@@ -1,5 +1,4 @@
 import React from "react"
-// import Sunset from './widget/sunset'
 import Widget from "./widget/widget"
 
 export const Dashboard = props => {
@@ -7,7 +6,7 @@ export const Dashboard = props => {
   let headerType = props.slice.primary.header_type
   let widgetType = props.slice.primary.widget_type
   const anchorId = props.slice.primary.anchor_id
-  
+
   return (
     <section 
       className="container dashboardWrapper"
@@ -20,18 +19,6 @@ export const Dashboard = props => {
       </div>
       <div className="row">
         {props.slice.items.map((slice, index) => {
-          // switch (slice.icon) {
-          // case "Sunset":
-          //     return <Sunset
-          //                 key={index}
-          //                 icon={slice.icon}
-          //                 header={slice.header_text}
-          //                 title={slice.title_text}
-          //                 iconColor={iconType}
-          //                 headerType={headerType}
-          //                 widgetType={widgetType}
-          //             />
-          // default:
           return (
             <Widget
               key={index}
@@ -43,7 +30,6 @@ export const Dashboard = props => {
               widgetType={widgetType}
             />
           )
-          // }
         })}
       </div>
     </section>
