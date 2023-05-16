@@ -283,4 +283,4 @@ export const query = graphql`
   }
 `
 
-export default withPrismicPreview(PageTemplate);
+export default withPrismicPreview(PageTemplate)
