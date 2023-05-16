@@ -18,7 +18,7 @@ export const repositoryConfigs = [
     repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
     linkResolver,
     componentResolver: {
-      homePage: pageTemplate
+      page: pageTemplate
     },
   },
   // {
