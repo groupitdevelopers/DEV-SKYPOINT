@@ -13,8 +13,8 @@ const PreviewPage = ({ isPreview, ...props }) => {
   );
 };
 
-export default withPrismicPreviewResolver(PreviewPage, {
+export default withPrismicPreviewResolver(PreviewPage)
 // export default withPreviewResolver(PreviewPage, {
-  repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
-  linkResolver: () => linkResolver,
-})
+  // repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+  // linkResolver: () => linkResolver,
+// })
