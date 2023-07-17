@@ -41,32 +41,16 @@ body {
     z-index: 1;
 
     h1 {
-      font-size: 5.5rem;
+      font-size: 5.5rem
     }
     h3 {
-      font-size: 2.5rem;
+      font-size: 2.5rem
     }
-
-    // @media screen and ($media-xs) {
-    //   h1 { font-size: 2.8rem; }
-    //   h3 {
-    //     font-size: 2rem;
-    //     font-weight: 400;
-    //   }
-    // }
-    
-    // @media screen and ($media-sm) {
-    //   h1 { font-size: 3.2rem; }
-    //   h3 {
-    //     font-size: 2.2rem;
-    //     font-weight: 400;
-    //   }
-    // }
   }
   
   @media screen and ($media-xs) {
     h1 { font-size: 2.8rem; }
-    h3 {
+    .hero-content {
       font-size: 2rem;
       font-weight: 400;
     }
@@ -77,11 +61,14 @@ body {
     .smV {display: none}
     .mdV {display: none}
     .lgV {display: none}
+    main {
+      padding-bottom: 9rem;
+    }
   }
 
   @media screen and ($media-sm) {
     h1 { font-size: 3.2rem; }
-    h3 {
+    .hero-content {
       font-size: 2.2rem;
       font-weight: 400;
     }
@@ -92,9 +79,15 @@ body {
     .smV {display: block!important}
     .mdV {display: none}
     .lgV {display: none}
+    main {
+      padding-bottom: 9rem;
+    }
   }
   
   @media screen and ($media-md) {
+    .hero-content {
+      font-size: 2.5rem
+    }
     .xsV {display: none}
     .smV {display: none}
     .mdV {display: block!important}
@@ -102,6 +95,9 @@ body {
   }
 
   @media screen and ($media-lg) {
+    .hero-content {
+      font-size: 2.5rem
+    }
     .xsV {display: none}
     .smV {display: none}
     .mdV {display: none}

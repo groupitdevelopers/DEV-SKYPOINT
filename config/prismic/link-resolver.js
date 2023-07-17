@@ -5,10 +5,10 @@ exports.linkResolver = (doc) => {
     }
     
     case "Subpage":
-      return `/${doc.uid}`;
+      return `/${doc.uid}/`;
 
     default:
-      if (!doc.uid) return "/";
+      if (doc.uid==="homepage") return "/";
       return doc.uid;
   }
-};
+}

@@ -1,10 +1,12 @@
 import React from "react"
 import Button from '../components/button'
+import { PrismicRichText } from "@prismicio/react"
 
-export const DoubleCard = props => {
+export const DoubleCardCustom = props => {
   const anchorId = props.slice.primary.anchor_id
   const visible = props.slice.primary.visible
   const data = props.slice.primary
+  const richText = props.slice.primary.text_field.richText
 
   function Images() {
     let images = []
@@ -71,14 +73,9 @@ export const DoubleCard = props => {
               </div>
             </div>
             <div
-              className={`doubleCardRight col bg-${props.slice.primary.text_box_background}`}
+              className={`doubleCardRight col bg-${props.slice.primary.text_box_background} txt-${props.slice.primary.text_color}`}
             >
-              <h1 className={`txt-${props.slice.primary.header_type}`}>
-                {props.slice.primary.header_text}
-              </h1>
-              <p className={`txt-lg txt-${props.slice.primary.text_color} p-0`}>
-                {props.slice.primary.body_text}
-              </p>
+              <PrismicRichText field={richText} />
               <Button 
                       buttonText={data.button_text}
                       buttonType={data.button_type}
@@ -100,16 +97,9 @@ export const DoubleCard = props => {
                 </div>
                 <div className="col_half box_padding_left">
                   <div
-                    className={`doubleCardRight col bg-${props.slice.primary.text_box_background}`}
+                    className={`doubleCardRight col bg-${props.slice.primary.text_box_background} txt-${props.slice.primary.text_color}`}
                   >
-                    <h1 className={`txt-${props.slice.primary.header_type}`}>
-                      {props.slice.primary.header_text}
-                    </h1>
-                    <p
-                      className={`txt-lg txt-${props.slice.primary.text_color} p-0`}
-                    >
-                      {props.slice.primary.body_text}
-                    </p>
+                    <PrismicRichText field={richText} />
                     <Button 
                       buttonText={data.button_text}
                       buttonType={data.button_type}
@@ -127,16 +117,9 @@ export const DoubleCard = props => {
               <div className="row">
                 <div className="col_half box_padding_right">
                   <div
-                    className={`doubleCardLeft col bg-${props.slice.primary.text_box_background}`}
+                    className={`doubleCardLeft col bg-${props.slice.primary.text_box_background} txt-${props.slice.primary.text_color}`}
                   >
-                    <h1 className={`txt-${props.slice.primary.header_type}`}>
-                      {props.slice.primary.header_text}
-                    </h1>
-                    <p
-                      className={`txt-lg txt-${props.slice.primary.text_color} p-0`}
-                    >
-                      {props.slice.primary.body_text}
-                    </p>
+                    <PrismicRichText field={richText} />
                     <Button 
                       buttonText={data.button_text}
                       buttonType={data.button_type}

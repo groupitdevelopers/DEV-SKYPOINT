@@ -1,6 +1,7 @@
 import { Hero } from './hero'
 import { Text } from './text'
 import { DoubleCard } from './doubleCard'
+import { DoubleCardCustom } from './doubleCardCustom'
 import { Box } from './box'
 import { Image } from './image'
 import { According } from './according'
@@ -17,6 +18,7 @@ export const components = {
   hero: Hero,
   text: Text,
   double_card: DoubleCard,
+  double_card_custom: DoubleCardCustom,
   box: Box,
   image: Image,
   accordion: According,

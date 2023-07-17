@@ -6,7 +6,7 @@ const Seo = ({seoData, children }) => {
     <>
       <title>{seoData.tab_title +` | SkyPoint`}</title>
       <script async defer src={link}></script>
-      <noscript><iframe title="frame" src="//www.googletagmanager.com/ns.html?id=GTM-WCSFZ5" height="0" width="0" style={{display:'none'}}></iframe></noscript>
+      <noscript><iframe title="frame" src="//www.googletagmanager.com/ns.html?id=GTM-WCSFZ5" height="0" width="0" style={{display:'none'}} frameborder="0" allow="autoplay; encrypted-media"></iframe></noscript>
       <script>{`
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -44,9 +44,8 @@ const Seo = ({seoData, children }) => {
       }
 
       <meta name="google-site-verification" content="tVEOKsPlVKjH8tUdHrg1_2CR4MYIKednmYl6NWFBiCo" />
-      <meta name="theme-color" content="#1a5d8d" media="(prefers-color-scheme: dark)"></meta>
-      <meta name="theme-color" content="#1a5d8d" media="(prefers-color-scheme: light)"></meta>
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></meta>
+      <meta name="robots" content="all"/>
+      <meta name="Googlebot" content="all"/>
       {children}
     </>
   );

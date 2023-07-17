@@ -60,7 +60,7 @@ export const Contactform = props => {
 
     if (formType === "Event") {
       subject = "SkyPoint Event Booking"
-      content = content + ` - Company: ${data.Company} - Post Code: ${data.PostCode} - Event Date: ${Day} ${Month} ${Year}`
+      content = content + ` - Company: ${data.Company} - Number of Guest: ${data.PostCode} - Event Date: ${Day} ${Month} ${Year}`
     }
     else {
       switch (form) {
@@ -403,7 +403,7 @@ export const Contactform = props => {
                       className="inputText"
                       type="text"
                       {...register("PostCode")}
-                      placeholder="Post Code"
+                      placeholder="Number of guests"
                     />
                   </div>
                 </div>
@@ -435,7 +435,8 @@ export const Contactform = props => {
                   <div className="col">
                     <textarea
                       className="inputTextarea"
-                      placeholder="Further Details"
+                      {...register("Message")}
+                      placeholder="Please provide details on the type of event you're looking to host (Dinner/Lunch/Cocktail/Conference/Other)"
                     />
                   </div>
                 </div>

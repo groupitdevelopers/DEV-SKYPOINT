@@ -18,7 +18,7 @@ export const Hero = props => {
             <div className="row">
               <div className="txt-white p-3 hero-text">
                 <h1>{props.slice.primary.header_text}</h1>
-                <h3>{props.slice.primary.title}</h3>
+                <div className="hero-content">{props.slice.primary.title}</div>
                 <div className="buttons">
                   {props.slice.items.map((btn, index) => (
                     <a href={btn.button_link.uid === null ? btn.button_link.url : '/'+btn.button_link.uid}
@@ -50,7 +50,7 @@ export const Hero = props => {
             <div className="row">
               <div className="txt-white p-3 hero-text">
                 <h1>{props.slice.primary.header_text}</h1>
-                <h3>{props.slice.primary.title}</h3>
+                <div className="hero-content">{props.slice.primary.title}</div>
                 <div className="buttons">
                   {props.slice.items.map((btn, index) => (
                     <a href={ btn.button_link.uid === null ? btn.button_link.url : '/'+btn.button_link.uid }

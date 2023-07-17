@@ -47,8 +47,12 @@ $radius: 0;
   $colorCode: map-get($colorPalette, $c);
   $borderColor: $colorCode;
 
-  @if $color == "light" or $color == "white" {
+  @if $color == "light" or $color == "white" or $color == "success" or $color == "nye-green" or $color == "christmas-blue"or $color == "christmas-blue" {
     $textColor: $primary-color;
+  }
+
+  @if $color == "nye-pink" {
+    $textColor: $black-color;
   }
 
   .btn-#{$color} {

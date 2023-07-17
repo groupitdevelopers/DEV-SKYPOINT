@@ -10,9 +10,11 @@ const rt = props.slice.items
         {rt.map((m, i) => (
           <>
             <PrismicRichText key={`RichText_`+i} field={m.rich_text.richText} />
-            <div className="txt-center">
-              <PrismicRichText field={m.center_rich_text.richText} />
-            </div>
+            {m.center_rich_text.richText &&
+              <div className="txt-center">
+                <PrismicRichText field={m.center_rich_text.richText} />
+              </div>
+            }
           </>
         ))}
     </section>

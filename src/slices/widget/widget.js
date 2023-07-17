@@ -1,32 +1,96 @@
 import React from "react"
+import { useEffect, useState } from "react"
+
 const Widget = ({ icon, header, title, iconColor, headerType, widgetType }) => {
 
-  // const [sunsetData, setSunsetData] = React.useState({})
-  // const sunData = async () => {
-  //     const response = await fetch('https://api.sunrise-sunset.org/json?lat=-28.016666&lng=153.399994&date=today&formatted=0');
-  //     let data = await response.json();
-  //     let date = data.results.sunset
-  //     let tzString = 'Australia/Brisbane'
-  //     let dt = new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
-  //     let hours = dt.getHours()
-  //     let minutes = dt.getMinutes()
-  //     let ampm = hours >= 12 ? 'PM' : 'AM'
-  //     hours = hours % 12
-  //     hours = hours ? hours : 12
-  //     minutes = minutes < 10 ? '0'+minutes : minutes
-  //     data = hours + ':' + minutes + ' ' + ampm
-  //     setSunsetData({"sunset":data})
-  // }
+  const [weather, setWeather] = useState({})
+  const [hoursData, setHoursData] = useState()
 
-  // sunData()
+  let defIcon = (icon === "Sunset") || (icon === "Visibility") || (icon === "Time") ? false : true 
+  
+  useEffect(() => {
+    let tokenLink = "https://spforms.ardentleisure.com/parksapi/gettoken"
+    let token = ""
+    let weatherLink = "https://spforms.ardentleisure.com/parksapi/OpenWeather?location=3"
+    let tradingHoursLink = "https://spforms.ardentleisure.com/parksapi/TradingHours/GetToday?location=3"
+    let weatherData = {}
 
-  // switch (icon){
-  //   case "Sunset":
-  //     title = sunsetData.sunset
-  //   break;   
-  //   default:
-  // }
+    const load = async () => {
+      fetch(tokenLink, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          Accept: "*/*",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Origin, Content-Type, Accept",
+        },
+        body: JSON.stringify({
+          Username: "ParksWeb",
+          Password: "EC52AB07-5D9E-48F5-9F53-1984D43AD698"
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        token = data.token
+        fetch(weatherLink, {
+          method: "GET",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            accept: "text/plain",
+            Authorization: `Bearer ${token}`,
+            "Access-Control-Allow-Origin": "*",
+          },
+        })
+        .then(response => response.json())
+        .then(responseData => {
+          let d = new Date()
+          let month = (d.getMonth()+1)<10 ? "0"+(d.getMonth()+1) : d.getMonth()+1
+          let day =  d.getDate()<10 ? "0"+d.getDate() : d.getDate()
+          let today = d.getFullYear()+"-"+month+"-"+day
+          responseData.daily.forEach(day => {
+            if(day.dt.slice(0, -10) === today) {
+              let des = day.weather[0].spLongDescription
+              weatherData.view = des
+              weatherData.sunset = sunsetTimeCalculation(day.sunset)
+              setWeather(weatherData)
+            }
+          })
+        })
+        .catch(err => {
+          console.log("NETWORK ERROR!")
+        })
 
+        fetch(tradingHoursLink, {
+          method: "GET",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            accept: "text/plain",
+            Authorization: `Bearer ${token}`,
+            "Access-Control-Allow-Origin": "*",
+          },
+        })
+        .then(res => res.json())
+        .then(resData => {
+          let hoursToday = resData.tradingHoursString
+          setHoursData(hoursToday)
+        })
+        .catch(err => {
+          console.log("NETWORK ERROR!")
+        })
+      })
+    }
+    load()
+  }, [])
+
+
+  function sunsetTimeCalculation(date) {
+    let d = new Date(date)
+    let hours = d.getHours()-12
+    let minutes = d.getMinutes()<10 ? "0"+d.getMinutes() : d.getMinutes()
+    return "Experience golden hour before "+hours+":"+minutes+"pm"
+  }
 
   return (
     <div className="col">
@@ -37,7 +101,18 @@ const Widget = ({ icon, header, title, iconColor, headerType, widgetType }) => {
             <div className={`h4 m-0 txt-${headerType} font-weight-6`}>
               {header}
             </div>
-            <p className="txt-lg m-0">{title}</p>
+            {icon === "Sunset" && (
+              <p className="txt-md m-0">{weather.sunset}</p>
+            )}
+            {icon === "Visibility" && (
+              <p className="txt-md m-0">{weather.view}</p>
+            )} 
+            {icon === "Time" && (
+              <p className="txt-md m-0">{hoursData}</p>
+            )}
+            {defIcon && (
+              <p className="txt-md m-0">{title}</p>
+            )}
           </div>
         </div>
       )}
@@ -51,7 +126,18 @@ const Widget = ({ icon, header, title, iconColor, headerType, widgetType }) => {
               className={`data h4 txt-center m-0 txt-${headerType} font-weight-6`}
             >
               {header}
-              <p className="txt-md m-0">{title}</p>
+              {icon === "Sunset" && (
+                <p className="txt-md m-0">{weather.sunset}</p>
+              )}
+              {icon === "Visibility" && (
+                <p className="txt-md m-0">{weather.view}</p>
+              )}
+              {icon === "Time" && (
+                 <p className="txt-md m-0">{hoursData}</p>
+              )}
+              {defIcon && (
+                <p className="txt-md m-0">{title}</p>
+              )}
             </div>
           </div>
         </div>

@@ -2,36 +2,44 @@ import  React from "react"
 import { graphql } from "gatsby"
 import { SliceZone } from "@prismicio/react"
 import { components } from "../slices"
-import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 
-const SubPageTemplate = ({ data }) => {
-
+const PageTemplate = ({ data }) => {
+  
   return (
     <Layout>
       <SliceZone
-        slices={data.prismicSubpage.data.body}
-        components={components}
-      />
+            slices={data.prismicHomepage.data.body}
+            components={components}
+        />
     </Layout>
   )
 }
 
 export const Head = ({ data }) => {
-  const seoData = data.prismicSubpage.data
-  return <Seo seoData={seoData} />
-}
+    const seoData = data.prismicHomepage.data
+    return <Seo seoData={seoData} />
+  }
 
 export const query = graphql`
-  query pageQuery($id: String) {
-    prismicSubpage(id: { eq: $id }) {
+  {
+    prismicHomepage {
       data {
         body {
-          ... on PrismicSubpageDataBodyHero {
+          ... on PrismicHomepageDataBodyHero {
             id
             slice_type
+            items {
+              button_type
+              button_text
+              button_link {
+                url
+                uid
+              }
+            }
             primary {
               background_type
               title
@@ -42,22 +50,14 @@ export const query = graphql`
               video {
                 url
               }
-              page_type
-              anchor_id
               mobile_video {
                 url
               }
-            }
-            items {
-              button_type
-              button_text
-              button_link {
-                url
-                uid
-              }
+              page_type
+              anchor_id
             }
           }
-          ... on PrismicSubpageDataBodyText {
+          ... on PrismicHomepageDataBodyText {
             id
             slice_type
             primary {
@@ -78,7 +78,7 @@ export const query = graphql`
               accesso_promo_code
             }
           }
-          ... on PrismicSubpageDataBodyDoubleCard {
+          ... on PrismicHomepageDataBodyDoubleCard {
             id
             slice_type
             primary {
@@ -107,7 +107,7 @@ export const query = graphql`
               }
             }
           }
-          ... on PrismicSubpageDataBodyBox {
+          ... on PrismicHomepageDataBodyBox {
             id
             slice_type
             items {
@@ -134,7 +134,7 @@ export const query = graphql`
               anchor_id
             }
           }
-          ... on PrismicSubpageDataBodyImage {
+          ... on PrismicHomepageDataBodyImage {
             slice_type
             primary {
               image {
@@ -145,7 +145,23 @@ export const query = graphql`
               auto_image_height
             }
           }
-          ... on PrismicSubpageDataBodyDashboard {
+          ... on PrismicHomepageDataBodyAccordion {
+            id
+            items {
+              header_text
+              according_title {
+                richText
+              }
+            }
+            primary {
+              header_text_color
+              header_type
+              type
+              anchor_id
+            }
+            slice_type
+          }
+          ... on PrismicHomepageDataBodyDashboard {
             id
             primary {
               header_type
@@ -161,7 +177,7 @@ export const query = graphql`
             }
             slice_type
           }
-          ... on PrismicSubpageDataBodyCarousel {
+          ... on PrismicHomepageDataBodyCarousel {
             id
             slice_type
             primary {
@@ -190,23 +206,7 @@ export const query = graphql`
               anchor_link
             }
           }
-          ... on PrismicSubpageDataBodyAccordion {
-            id
-            items {
-              header_text
-              according_title {
-                richText
-              }
-            }
-            primary {
-              header_text_color
-              header_type
-              type
-              anchor_id
-            }
-            slice_type
-          }
-          ... on PrismicSubpageDataBodyContactform {
+          ... on PrismicHomepageDataBodyContactform {
             id
             slice_type
             primary {
@@ -214,7 +214,7 @@ export const query = graphql`
               anchor_id
             }
           }
-          ... on PrismicSubpageDataBodyInfobox {
+          ... on PrismicHomepageDataBodyInfobox {
             id
             primary {
               info_text {
@@ -224,7 +224,7 @@ export const query = graphql`
             }
             slice_type
           }
-          ... on PrismicSubpageDataBodyOpeninghours {
+          ... on PrismicHomepageDataBodyOpeninghours {
             id
             items {
               close
@@ -236,7 +236,7 @@ export const query = graphql`
               anchor_id
             }
           }
-          ... on PrismicSubpageDataBodySubscribeForm {
+          ... on PrismicHomepageDataBodySubscribeForm {
             id
             slice_type
             primary {
@@ -244,7 +244,7 @@ export const query = graphql`
               button_type
             }
           }
-          ... on PrismicSubpageDataBodyRichText {
+          ... on PrismicHomepageDataBodyRichText {
             id
             slice_type
             items {
@@ -256,19 +256,19 @@ export const query = graphql`
               }
             }
           }
-          ... on PrismicSubpageDataBodyTable {
+          ... on PrismicHomepageDataBodyTable {
             id
             slice_type
-            items {
-              column
-              header_text
-            }
             primary {
               header_background
               header_text_color
             }
+            items {
+              header_text
+              column
+            }
           }
-          ... on PrismicSubpageDataBodyDoubleCardCustom {
+          ... on PrismicHomepageDataBodyDoubleCardCustom {
             id
             slice_type
             items {
@@ -310,5 +310,5 @@ export const query = graphql`
   }
 `
 
-export default withPrismicPreview(SubPageTemplate)
-// export default SubPageTemplate
+export default withPrismicPreview(PageTemplate)
+// export default PageTemplate
