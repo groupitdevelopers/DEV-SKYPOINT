@@ -13,6 +13,7 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-gatsby-cloud",
+    "gatsby-plugin-netlify",
     {
       resolve: "gatsby-source-filesystem",
       options: {
