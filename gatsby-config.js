@@ -22,16 +22,16 @@ module.exports = {
       },
       __key: "images",
     },
-    // {
-    //   resolve: "gatsby-source-prismic",
-    //   options: {
-    //     repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
-    //     accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-    //     customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
-    //     releaseId: process.env.PRISMIC_RELEASE_ID,
-    //     linkResolver: (doc) => linkResolver(doc)
-    //   }
-    // },
+    {
+      resolve: "gatsby-source-prismic",
+      options: {
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        releaseId: process.env.PRISMIC_RELEASE_ID,
+        linkResolver: (doc) => linkResolver(doc)
+      }
+    },
     {
       resolve: "gatsby-plugin-prismic-previews",
       options: {
@@ -41,8 +41,6 @@ module.exports = {
         // releaseId: process.env.PRISMIC_RELEASE_ID,
         // linkResolver: (doc) => linkResolver(doc)
         repositoryName: 'gatsby-source-prismic-test-site',
-        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
         linkResolver: linkResolver,
         path: '/preview',
       }
