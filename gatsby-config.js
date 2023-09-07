@@ -38,11 +38,10 @@ module.exports = {
         // repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         // accessToken: process.env.PRISMIC_ACCESS_TOKEN
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
-        // accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-        // customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
-        // releaseId: process.env.PRISMIC_RELEASE_ID,
-        linkResolver: require("./config/prismic/link-resolver"),
-        path: '/preview'
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        releaseId: process.env.PRISMIC_RELEASE_ID,
+        linkResolver: (doc) => linkResolver(doc)
       }
     },
     {
@@ -71,5 +70,18 @@ module.exports = {
         display: 'swap'
       }
     }
+    // {
+    // resolve: `gatsby-omni-font-loader`,
+    //   options: {
+    //     enableListener: true,
+    //     preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+    //     web: [
+    //       {
+    //         name: `Poppins`,
+    //         file: `https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap`,
+    //       },
+    //     ],
+    //   }
+    // }
   ]
 }
