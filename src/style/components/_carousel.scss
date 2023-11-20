@@ -97,6 +97,11 @@
           font-weight: $bold;
           justify-content: center;
 
+          .fromTxt {
+            font-size: 18px;
+            margin-top: 45px;
+          }
+
           .dollar {
             font-size: 2.8rem;
             margin-top: 1rem;
