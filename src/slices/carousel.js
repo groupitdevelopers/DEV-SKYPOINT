@@ -43,6 +43,7 @@ export const Carousel = props => {
               <div className="col p-0">
                 <div className="row">
                   <div className="col p-0 price">
+                    <div className="from">FROM</div>
                     <div className="dollar">$</div> {carousel.price}
                   </div>
                 </div>
