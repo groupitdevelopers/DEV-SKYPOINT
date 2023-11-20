@@ -1,0 +1,206 @@
+# Using short url for anchor positioning because # not supporting in netlify 
+# Link: https://tinyurl.com/app
+
+[[redirects]]
+from = "/homepage"
+to = "/"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit"
+to = "/visit"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/types-of-tickets"
+to = "/tickets"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/skypoint-breakfast"
+to = "/breakfast"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/skypoint-bistro-and-bar"
+to = "/dine"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/skypoint-rewards"
+to = "/tickets"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/getting-here-parking"
+to = "https://tinyurl.com/m5e4ehu7"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/opening-hours"
+to = "https://tinyurl.com/bd663rc7"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/frequently-asked-questions"
+to = "https://tinyurl.com/2pm735x9"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/facts-and-history"
+to = "/visit"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/education-programs"
+to = "/tickets"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/group-visits"
+to = "https://tinyurl.com/bdev7zuz"
+status = 200
+force = true
+
+[[redirects]]
+from = "/plan-your-visit/gift-certificates"
+to = "https://tinyurl.com/mr3579zc"
+status = 200
+force = true
+
+[[redirects]]
+from = "/skypoint-climb"
+to = "/climb"
+status = 200
+force = true
+
+[[redirects]]
+from = "/skypoint-climb/experience-information"
+to = "https://tinyurl.com/y9ajumda"
+status = 200
+force = true
+
+[[redirects]]
+from = "/skypoint-climb/climb-preparation"
+to = "https://tinyurl.com/mr2wsbpf"
+status = 200
+force = true
+
+[[redirects]]
+from = "/skypoint-climb/frequently-asked-questions"
+to = "https://tinyurl.com/mvpaa3mm"
+status = 200
+force = true
+
+[[redirects]]
+from = "/what-s-on"
+to = "/whatson"
+status = 200
+force = true
+
+[[redirects]]
+from = "/what-s-on/skypoint-sounds"
+to = "/skypoint-sounds"
+status = 200
+force = true
+
+[[redirects]]
+from = "/what-s-on/stair-challenge"
+to = "/stair-challenge"
+status = 200
+force = true
+
+[[redirects]]
+from = "/what-s-on/magical-circus"
+to = "/magical-circus"
+status = 200
+force = true
+
+[[redirects]]
+from = "/events-at-skypoint"
+to = "/functions"
+status = 200
+force = true
+
+[[redirects]]
+from = "/events-at-skypoint/level-2-events"
+to = "/functions"
+status = 200
+force = true
+
+[[redirects]]
+from = "/events-at-skypoint/level-77-events"
+to = "/functions"
+status = 200
+force = true
+
+[[redirects]]
+from = "/events-at-skypoint/level-78-events"
+to = "/functions"
+status = 200
+force = true
+
+[[redirects]]
+from = "/covid-19-update/"
+to = "/"
+status = 200
+force = true
+
+[[redirects]]
+from = "/skypoint-info/trade-media"
+to = "/trade-and-media"
+status = 200
+force = true
+
+[[redirects]]
+from = "/copyright-disclaimer"
+to = "/copyright-and-disclaimer"
+status = 200
+force = true
+
+[[redirects]]
+from = "/promotions/coastal-local-15-entry"
+to = "/tickets"
+status = 200
+force = true
+
+[[redirects]]
+from = "/skypoint-info/employment/indigenous-employment"
+to = "/employment"
+status = 200
+force = true
+
+[[redirects]]
+from = "/skypoint-info/employment/vision-values"
+to = "/employment"
+status = 200
+force = true
+
+[[redirects]]
+from = "/404-not-found"
+to = "/404"
+status = 200
+force = true
+
+[[redirects]]
+from = "/skypoint-info/q1-resort-spa"
+to = "/q1-resort-spa"
+status = 200
+force = true
+
+[[redirects]]
+from = "/photos"
+to = "https://www.myvenuephotos.com/claim/index?PK=add17496-b1fc-4a3a-b247-3d3fa504e38d"
+status = 301
+force = true

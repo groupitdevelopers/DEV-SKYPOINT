@@ -11,5 +11,9 @@
 }
 
 .imageWrapperFullWidth {
-  width:100%
+  width:100%;
+  img {
+    margin: auto;
+  max-width: 100%;
+  }
 }

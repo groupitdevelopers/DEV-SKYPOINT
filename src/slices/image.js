@@ -13,6 +13,12 @@ export const Image = props => {
       <div className="row">
         <div className="col p-0 txt-center">
           <img
+            className="xsV smV imgSlice"
+            src={props.slice.primary.mobile_image.url}
+            alt={props.slice.primary.image.alt ? props.slice.primary.image.alt : props.slice.primary.image.url}
+          />
+          <img
+            className="mdV lgV imgSlice"
             src={props.slice.primary.image.url}
             alt={props.slice.primary.image.alt ? props.slice.primary.image.alt : props.slice.primary.image.url}
           />

@@ -212,7 +212,7 @@ export const Box = props => {
                     </div>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row xsV smV">
                   <div className="col box_padding_right">
                     <div className="col p-0 smBox">
                       {boxes[1].flag && (

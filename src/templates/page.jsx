@@ -46,6 +46,9 @@ export const query = graphql`
               background {
                 url
               }
+              background {
+                url
+              }
               header_text
               video {
                 url
@@ -138,6 +141,9 @@ export const query = graphql`
             slice_type
             primary {
               image {
+                url
+              }
+              mobile_image {
                 url
               }
               anchor_id

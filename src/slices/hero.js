@@ -7,13 +7,14 @@ export const Hero = props => {
   return (
     <>
       {!props.slice.primary.background_type  && (
-          <section
-            className={`${cls}`}
-            style={{
-              backgroundImage: `url(${props.slice.primary.background.url})`,
-            }}
-            id = {anchorId}
-          >
+      <>
+        <section
+          className={`${cls}`}
+          style={{
+            backgroundImage: `url(${props.slice.primary.background.url})`,
+          }}
+          id = {anchorId}
+        >
           <div className="container">
             <div className="row">
               <div className="txt-white p-3 hero-text">
@@ -33,6 +34,7 @@ export const Hero = props => {
             </div>
           </div>
         </section>
+      </>
       )}
       {props.slice.primary.background_type && (
         <section 

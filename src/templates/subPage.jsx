@@ -140,6 +140,9 @@ export const query = graphql`
               image {
                 url
               }
+              mobile_image {
+                url
+              }
               anchor_id
               text
               auto_image_height

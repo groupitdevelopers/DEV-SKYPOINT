@@ -2,7 +2,7 @@ const path = require(`path`);
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const { createRedirect } = actions
+  // const { createRedirect } = actions
   const homePage = path.resolve(`./src/templates/page.jsx`)
   const subPage = path.resolve(`./src/templates/subPage.jsx`)
 
@@ -17,18 +17,18 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const redirections = await graphql(`
-    query {
-      prismicRedirections {
-        data {
-          redirections {
-            from
-            to
-          }
-        }
-      }
-    }
-  `)
+  // const redirections = await graphql(`
+  //   query {
+  //     prismicRedirections {
+  //       data {
+  //         redirections {
+  //           from
+  //           to
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   createPage({
     path: "/",
@@ -38,14 +38,14 @@ exports.createPages = async ({ graphql, actions }) => {
     },
   });
 
-  const redirects = redirections.data.prismicRedirections.data.redirections
+  // const redirects = redirections.data.prismicRedirections.data.redirections
 
-  redirects.forEach(redirect => {
-    createRedirect({
-      fromPath: redirect.from,
-      toPath: redirect.to
-    })
-  })
+  // redirects.forEach(redirect => {
+  //   createRedirect({
+  //     fromPath: redirect.from,
+  //     toPath: redirect.to
+  //   })
+  // })
 
   for (const page of queryResult.data.allPrismicSubpage.nodes ?? []) {
     createPage({
