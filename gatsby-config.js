@@ -64,23 +64,10 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `poppins\:300,400,500,600,700,800` 
+          `Alegreya Sans SC\:300,400,500,600,700,800` 
         ],
         display: 'swap'
       }
     }
-    // {
-    // resolve: `gatsby-omni-font-loader`,
-    //   options: {
-    //     enableListener: true,
-    //     preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
-    //     web: [
-    //       {
-    //         name: `Poppins`,
-    //         file: `https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap`,
-    //       },
-    //     ],
-    //   }
-    // }
   ]
 }
