@@ -47,14 +47,14 @@ export const Footer = props => {
     <>
       {/* Menu Medium Large */}
         <section className='footerWrapper mt-3 mdV lgV'>
-          <div className='container pb-4 '>
+          <div className='container p-2'>
             <div className='row'>
               {footer.prismicFooter.data.footer_links.length > 5 && (
                 <>
-                  <div className='col_quarter pl-0'>
+                  <div className='col_quarter pl-0 mt-1'>
                     {links(footer.prismicFooter.data.footer_links.slice(0, 5))}
                   </div>
-                  <div className='col_quarter pl-0'>
+                  <div className='col_quarter pl-0 mt-1'>
                     {links(footer.prismicFooter.data.footer_links.slice(5))}
                   </div>
                 </>
