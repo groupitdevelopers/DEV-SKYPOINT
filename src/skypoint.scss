@@ -9,6 +9,22 @@
 @import "./src/style/designSystem/_form";
 
 
+@font-face {
+  font-family: 'dalton';
+  src: url('../src/style/fonts/Dalton.woff2') format('woff2'),
+      url('../src/style/fonts/Dalton.woff') format('woff'),
+      url('../src/style/fonts/Dalton.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:"area-normal";
+  src:url("https://use.typekit.net/af/547c60/0000000000000000774b9fcd/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff2"),url("https://use.typekit.net/af/547c60/0000000000000000774b9fcd/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff"),url("https://use.typekit.net/af/547c60/0000000000000000774b9fcd/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("opentype");
+  font-display:auto;font-style:italic;font-weight:100, 200, 300, 400, 600, 800;font-stretch:normal;
+}
+
 html,
 body {
   margin: 0;
@@ -17,10 +33,14 @@ body {
   left: 0;
   min-height: 100vh;
   font-size: 10px;
-  font-family: "Oswald", sans-serif;
+  font-family: "area-normal", "Oswald";
 
   #___gatsby {
     margin-bottom: -40px;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'dalton';
   }
 
   .fourzerofour{
