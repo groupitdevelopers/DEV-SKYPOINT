@@ -64,7 +64,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Alegreya Sans SC\:300,400,500,600,700,800` 
+          `Oswald\:100,200,300,400,500,600,700,800` 
         ],
         display: 'swap'
       }
