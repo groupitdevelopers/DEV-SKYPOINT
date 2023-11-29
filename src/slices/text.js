@@ -36,6 +36,7 @@ export const Text = props => {
                   <Button 
                     buttonText={data.button_text}
                     buttonType={data.button_type}
+                    buttonTarget={data.open_button_link_in}
                     buttonLinkUrl={data.button_link.url}
                     buttonLinkUid={data.button_link.uid}
                     buttonAnchorLink={data.anchor_link}
@@ -74,6 +75,7 @@ export const Text = props => {
                   <Button 
                     buttonText={data.button_text}
                     buttonType={data.button_type}
+                    buttonTarget={data.open_button_link_in}
                     buttonLinkUrl={data.button_link.url}
                     buttonLinkUid={data.button_link.uid}
                     buttonAnchorLink={data.anchor_link}
@@ -111,6 +113,7 @@ export const Text = props => {
                   <Button 
                     buttonText={data.button_text}
                     buttonType={data.button_type}
+                    buttonTarget={data.open_button_link_in}
                     buttonLinkUrl={data.button_link.url}
                     buttonLinkUid={data.button_link.uid}
                     buttonAnchorLink={data.anchor_link}
@@ -146,6 +149,7 @@ export const Text = props => {
                   <Button 
                     buttonText={data.button_text}
                     buttonType={data.button_type}
+                    buttonTarget={data.open_button_link_in}
                     buttonLinkUrl={data.button_link.url}
                     buttonLinkUid={data.button_link.uid}
                     buttonAnchorLink={data.anchor_link}
@@ -181,6 +185,7 @@ export const Text = props => {
                   <Button 
                     buttonText={data.button_text}
                     buttonType={data.button_type}
+                    buttonTarget={data.open_button_link_in}
                     buttonLinkUrl={data.button_link.url}
                     buttonLinkUid={data.button_link.uid}
                     buttonAnchorLink={data.anchor_link}
@@ -217,9 +222,10 @@ export const Text = props => {
               <div className="row">
                 <div className="col_half m-0"></div>
                 <div className="col_half m-0 pr-0 txt-right">
-                  <Button 
+                  <Button
                     buttonText={data.button_text}
                     buttonType={data.button_type}
+                    buttonTarget={data.open_button_link_in}
                     buttonLinkUrl={data.button_link.url}
                     buttonLinkUid={data.button_link.uid}
                     buttonAnchorLink={data.anchor_link}

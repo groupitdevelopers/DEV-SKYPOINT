@@ -1,26 +1,27 @@
 .tableWrapper {
     display: flex;
     flex-flow: wrap;
-    
-    .tableBox{
-        width: 25%;
-        text-align: center;
-        font-size: 1.6rem;
-        box-sizing: border-box;
-        border: 1px solid $light-color;
+    .tableBoxWrapper{
+        display: contents;
+        .tableBox{
+            width: 25%;
+            text-align: center;
+            font-size: 1.6rem;
+            box-sizing: border-box;
+            border: 1px solid $light-color;
 
-        .header {
-            padding: 0.5rem;
-        }
+            .header {
+                padding: 0.5rem;
+            }
 
-        .text {
-            padding: 0.5rem;
-            font-weight: bolder;
+            .text {
+                padding: 0.5rem;
+                font-weight: bolder;
+            }
         }
-    }
-    .tableBoxEmpty{
-        width: 25%;
-    }
+        .tableBoxEmpty{
+            width: 25%;
+        }
 
     @media screen and ($media-xs) {
         .tableBox{
@@ -39,4 +40,5 @@
             display: none;
         }
     }
+}
 }

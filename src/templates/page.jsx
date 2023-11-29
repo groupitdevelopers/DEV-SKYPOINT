@@ -6,15 +6,14 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
-
 const PageTemplate = ({ data }) => {
   
   return (
     <Layout>
       <SliceZone
-            slices={data.prismicHomepage.data.body}
-            components={components}
-        />
+        slices={data.prismicHomepage.data.body}
+        components={components}
+      />
     </Layout>
   )
 }
@@ -66,6 +65,7 @@ export const query = graphql`
             primary {
               button_text
               button_type
+              open_button_link_in
               header_text
               header_type
               sub_header
@@ -240,14 +240,6 @@ export const query = graphql`
             slice_type
             primary {
               anchor_id
-            }
-          }
-          ... on PrismicHomepageDataBodySubscribeForm {
-            id
-            slice_type
-            primary {
-              button_text
-              button_type
             }
           }
           ... on PrismicHomepageDataBodyRichText {

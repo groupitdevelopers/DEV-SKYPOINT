@@ -28,6 +28,8 @@ const Seo = ({seoData, children }) => {
         `}
       </script>
       <script type="text/javascript" src="https://al-dreamworld.secure-cdn.oc.accessoticketing.com/embed/accesso.js" data-accesso="l=en-au"></script>
+      {/* Campaign Monitor Subscribe form */}
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       <meta name="description" content={seoData.meta_description} />
       <meta name="keywords" content={seoData.meta_keywords} />
       {seoData.og_title &&

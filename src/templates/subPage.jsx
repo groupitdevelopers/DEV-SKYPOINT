@@ -6,9 +6,7 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-
 const SubPageTemplate = ({ data }) => {
-
   return (
     <Layout>
       <SliceZone
@@ -63,6 +61,7 @@ export const query = graphql`
             primary {
               button_text
               button_type
+              open_button_link_in
               header_text
               header_type
               sub_header
@@ -237,14 +236,6 @@ export const query = graphql`
             slice_type
             primary {
               anchor_id
-            }
-          }
-          ... on PrismicSubpageDataBodySubscribeForm {
-            id
-            slice_type
-            primary {
-              button_text
-              button_type
             }
           }
           ... on PrismicSubpageDataBodyRichText {
