@@ -89,10 +89,9 @@ body {
   }
 
   .subscribeModal{
-    // display: none;
     position: fixed;
     z-index: 9;
-    padding-top: 100px;
+    padding-top: 4rem;
     left: 0;
     top: 0;
     width: 100%;
@@ -111,7 +110,7 @@ body {
 
   .iframe {
     width: 545px;
-    height: 945px
+    height: 920px
   }
   
   .closeBtn {

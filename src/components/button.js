@@ -38,8 +38,10 @@ const Button = ({
 
   function allowModal() {
     let allow = false
-    if (buttonTarget === "Modal" && windowDimensions.width > 550) { allow = true }
-    console.log("ALLOW:", allow)
+    if (buttonTarget === "Modal" && windowDimensions.width > 550) { 
+      allow = true 
+      setGlobalState("modalLink", fullLink)
+    }
     return allow
   }
 
@@ -86,7 +88,6 @@ const Button = ({
 
   return (
     <>
-      {/* {buttonTarget === "Modal" && ( */}
       {allowModal() && (
         <button
           onClick={showIframe}
@@ -96,7 +97,6 @@ const Button = ({
         </button>
       )}
 
-      {/* {buttonTarget !== "Modal" && ( */}
       {!allowModal() && (
       <>
         {fullLink && (

@@ -3,6 +3,7 @@ import { setGlobalState, useGlobalState } from "../components/store"
 
 const SubscribeForm = () => {
 const [showSubscribe] = useGlobalState("showSubscribe")
+const [link] = useGlobalState("modalLink")
 
 function hideIframe() {
   setGlobalState("showSubscribe", false)
@@ -27,7 +28,7 @@ return (
                 <iframe 
                   className="iframe"
                   title="myFrame"
-                  src="https://confirmsubscription.com/h/y/F07E98FF8A936783/forms/0A40235391EB5E85"
+                  src={link}
                   frameBorder="0"
                   marginWidth="0"
                   allowFullScreen 
