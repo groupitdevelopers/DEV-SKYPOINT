@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { setGlobalState} from "../components/store"
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
-}
-
 const Button = ({
     buttonText,
     buttonType,
@@ -20,29 +12,43 @@ const Button = ({
     accessoKeyword,
     accessoPackageId
 }) => {
-
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  
+  const [windowSize, setWindowSize] = useState(() => {
+      // use a lazy initializer, which helps you have a cleaner
+      // view into how this might be initialized in either CSR or SSR contexts
+      return typeof window !== 'undefined' ? window.innerWidth : 0; // start with state at zero if we are on the server
+      // naturally you can change `0` to whatever you prefer, or suits your needs best
+  });
 
   useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
+      // inside useEffect, the window is always present
+      const updateWindowSize = () => {
+          setWindowSize(window.innerWidth);
+      };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+      updateWindowSize(); // as soon as we are on the client, run this handler
+
+      window.addEventListener('resize', updateWindowSize); // works only on resize events
+
+      return () => {
+          window.removeEventListener('resize', updateWindowSize); // clean up
+      };
+  }, []); // attach this once
 
   function showIframe() {
+    console.log("SS",windowSize)
     setGlobalState("showSubscribe", true)
   }
 
   function allowModal() {
     let allow = false
-    if (buttonTarget === "Modal" && windowDimensions.width > 550) { 
+    if (buttonTarget === "Modal" && windowSize > 550) {
+      if (buttonTarget === "Modal") {
       allow = true 
       setGlobalState("modalLink", fullLink)
     }
     return allow
+    }
   }
 
   let fullLink = buttonLinkUrl

@@ -10,7 +10,6 @@ import { Carousel } from './carousel'
 import { Contactform } from './contactForm'
 import { Infobox } from './infobox'
 import { OpeningHours } from './openHours'
-// import { SubscribeForm } from './subscribeForm'
 import { RichText } from './richText'
 import { Table } from './table'
 
@@ -27,7 +26,6 @@ export const components = {
   contactform: Contactform,
   infobox: Infobox,
   openinghours: OpeningHours,
-  // subscribe_form: SubscribeForm,
   rich_text: RichText,
   table: Table
 }
