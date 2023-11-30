@@ -103,8 +103,8 @@ const Header = () => {
         <section
           className={`welcomeMessageWrapper bg-${headerElement.prismicNavigation.data.background}`}
         >
-          <PrismicRichText
-            className={`txt-${headerElement.prismicNavigation.data.text_colour} `}
+          <div className={`txt-${headerElement.prismicNavigation.data.text_colour} `}>
+          <PrismicRichText            
             field={headerElement.prismicNavigation.data.top_message.richText}
             components={{
               hyperlink: ({ node, children, key }) => (
@@ -123,6 +123,7 @@ const Header = () => {
               )
             }}
           />
+          </div>
         </section>
       )}
       <section className="menuWrapper">
