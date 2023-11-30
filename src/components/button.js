@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import { setGlobalState} from "../components/store"
+import React from "react"
+import { setGlobalState, useGlobalState} from "../components/store"
 
 const Button = ({
     buttonText,
@@ -12,43 +12,21 @@ const Button = ({
     accessoKeyword,
     accessoPackageId
 }) => {
+
+  const [windowWidth] = useGlobalState("windowWidth")
   
-  const [windowSize, setWindowSize] = useState(() => {
-      // use a lazy initializer, which helps you have a cleaner
-      // view into how this might be initialized in either CSR or SSR contexts
-      return typeof window !== 'undefined' ? window.innerWidth : 0; // start with state at zero if we are on the server
-      // naturally you can change `0` to whatever you prefer, or suits your needs best
-  });
-
-  useEffect(() => {
-      // inside useEffect, the window is always present
-      const updateWindowSize = () => {
-          setWindowSize(window.innerWidth);
-      };
-
-      updateWindowSize(); // as soon as we are on the client, run this handler
-
-      window.addEventListener('resize', updateWindowSize); // works only on resize events
-
-      return () => {
-          window.removeEventListener('resize', updateWindowSize); // clean up
-      };
-  }, []); // attach this once
-
   function showIframe() {
-    console.log("SS",windowSize)
     setGlobalState("showSubscribe", true)
   }
 
   function allowModal() {
     let allow = false
-    if (buttonTarget === "Modal" && windowSize > 550) {
-      if (buttonTarget === "Modal") {
+    if (buttonTarget === "Modal" && windowWidth > 550) {
+      // if (buttonTarget === "Modal") {
       allow = true 
       setGlobalState("modalLink", fullLink)
     }
     return allow
-    }
   }
 
   let fullLink = buttonLinkUrl
