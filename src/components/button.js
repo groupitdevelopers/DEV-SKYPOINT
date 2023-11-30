@@ -1,5 +1,13 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { setGlobalState} from "../components/store"
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
 
 const Button = ({
     buttonText,
@@ -13,8 +21,26 @@ const Button = ({
     accessoPackageId
 }) => {
 
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   function showIframe() {
     setGlobalState("showSubscribe", true)
+  }
+
+  function allowModal() {
+    let allow = false
+    if (buttonTarget === "Modal" && windowDimensions.width > 550) { allow = true }
+    console.log("ALLOW:", allow)
+    return allow
   }
 
   let fullLink = buttonLinkUrl
@@ -60,7 +86,8 @@ const Button = ({
 
   return (
     <>
-      {buttonTarget === "Modal" && (
+      {/* {buttonTarget === "Modal" && ( */}
+      {allowModal() && (
         <button
           onClick={showIframe}
           className={`btn btn-${buttonType}`}
@@ -69,7 +96,8 @@ const Button = ({
         </button>
       )}
 
-      {buttonTarget !== "Modal" && (
+      {/* {buttonTarget !== "Modal" && ( */}
+      {!allowModal() && (
       <>
         {fullLink && (
           <a
