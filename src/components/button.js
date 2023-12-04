@@ -17,14 +17,14 @@ const Button = ({
   
   function showIframe() {
     setGlobalState("showSubscribe", true)
+    setGlobalState("modalLink", fullLink)
   }
 
   function allowModal() {
     let allow = false
     if (buttonTarget === "Modal" && windowWidth > 550) {
-      // if (buttonTarget === "Modal") {
       allow = true 
-      setGlobalState("modalLink", fullLink)
+      
     }
     return allow
   }
